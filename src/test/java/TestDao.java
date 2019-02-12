@@ -48,6 +48,7 @@ public class TestDao {
         problemEntity.getClassification().setCid(1);
         problemEntity.getAnswer().setAid(2);
         problemRepository.save(problemEntity);
+        System.out.println(problemRepository.countAllByContentLikeAndClassification_Cid("%%",1));
     }
     @Test
     public void testjieba(){
@@ -56,6 +57,17 @@ public class TestDao {
             p.setKeywords(StringUtils.join(segmenter.sentenceProcess(p.getContent())," "));
             problemRepository.save(p);
         }
+    }
+
+    @Test
+    public void testConversation(){
+        ConversationEntity conversationEntity=new ConversationEntity();
+        UserEntity userEntity1=new UserEntity();
+        userEntity1.setUid(1);
+        conversationEntity.setCustomer(userEntity1);
+        UserEntity userEntity2=new UserEntity();
+        userEntity2.setUid(2);
+        conversationEntity.setCustomer(userEntity1);
     }
 
 }

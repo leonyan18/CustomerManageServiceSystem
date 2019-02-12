@@ -11,5 +11,8 @@ import java.util.List;
  */
 public interface ProblemRepository extends JpaRepository<ProblemEntity,Integer> {
     ProblemEntity findByPid(int pid);
+    long countAllByContentLikeAndClassification_Cid(String keyword, int cid);
+    long countAllByContentLike(String keyword);
     List<ProblemEntity> findAllByContentLikeAndClassification_Cid(String keyword, Pageable pageable,int cid);
+    List<ProblemEntity> findAllByContentLike(String keyword, Pageable pageable);
 }

@@ -47,12 +47,16 @@ public class ProblemController {
 
     @ApiOperation(value = "问题列表",notes = "关键词搜索和类别")
     @RequestMapping(value = "problemList", method = RequestMethod.POST)
-    public List<ProblemEntity> problemList(@RequestParam(defaultValue = "")String keyword, int pageNum, int pageSize,int classificationId) {
+    public List<ProblemEntity> problemList(@RequestParam(defaultValue = "")String keyword, int pageNum, int pageSize,@RequestParam(defaultValue = "0")int classificationId) {
         keyword="%"+keyword+"%";
-        for (ProblemEntity p:problemService.findAllProblemByKeywordAndClassification(keyword, PageRequest.of(pageNum-1,pageSize),classificationId)){
-            logger.info(p.toString());
-        }
         return problemService.findAllProblemByKeywordAndClassification(keyword, PageRequest.of(pageNum-1,pageSize),classificationId);
+    }
+
+    @ApiOperation(value = "问题数目",notes = "关键词搜索和类别")
+    @RequestMapping(value = "countProblem", method = RequestMethod.POST)
+    public long countProblem(@RequestParam(defaultValue = "")String keyword,@RequestParam(defaultValue = "0")int classificationId) {
+        keyword="%"+keyword+"%";
+        return problemService.countAllByContentLikeAndClassification_Cid(keyword, classificationId);
     }
 
     @ApiOperation(value = "更新问题",notes = "需上传答案id和类别id")
