@@ -10,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -40,5 +41,11 @@ public class ConversationController {
             logger.info(conversationEntity.getStarttime());
         }
         return conversationEntityList.get(0);
+    }
+
+    @RequestMapping(value = "/startConversation",method = RequestMethod.GET)
+    @ApiOperation(value="开始对话")
+    public void startConversation(int customerId,@RequestParam(defaultValue = "0") int staffId){
+
     }
 }

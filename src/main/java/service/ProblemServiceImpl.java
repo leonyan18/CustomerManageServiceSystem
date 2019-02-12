@@ -62,7 +62,11 @@ public class ProblemServiceImpl implements ProblemService {
 
     @Override
     public List<ProblemEntity> findAllProblemByKeywordAndClassification(String keyword, Pageable pageable, int classificationId) {
-        return problemRepository.findAllByContentLikeAndClassification_Cid(keyword, pageable, classificationId);
+        if(classificationId!=0) {
+            return problemRepository.findAllByContentLikeAndClassification_Cid(keyword, pageable, classificationId);
+        }else{
+            return problemRepository.findAllByContentLike(keyword,pageable);
+        }
     }
 
     @Override
@@ -89,6 +93,15 @@ public class ProblemServiceImpl implements ProblemService {
             problemRepository.save(problemEntity1);
         } else {
             throw LogicException.le(ErrorMessage.NO_SUCH_ENTITY);
+        }
+    }
+
+    @Override
+    public long countAllByContentLikeAndClassification_Cid(String keyword, int cid) {
+        if (cid!=0) {
+            return problemRepository.countAllByContentLikeAndClassification_Cid(keyword, cid);
+        }else{
+            return problemRepository.countAllByContentLike(keyword);
         }
     }
 }

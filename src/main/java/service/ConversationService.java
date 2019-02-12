@@ -11,4 +11,5 @@ public interface ConversationService {
      * @return java.util.List<DTO.ConversationDTO>
      */
     List<ConversationDTO> findAllConversation();
+    void startConversation();
 }
