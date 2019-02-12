@@ -3,6 +3,7 @@ import com.huaban.analysis.jieba.JiebaSegmenter;
 import config.DataConfig;
 import config.RootConfig;
 import dao.AnswerRepository;
+import dao.ConversationRepository;
 import dao.ProblemRepository;
 import dao.UserRepository;
 import entity.*;
@@ -27,6 +28,8 @@ public class TestDao {
     private ProblemRepository problemRepository;
     @Autowired
     private AnswerService answerService;
+    @Autowired
+    private ConversationRepository conversationRepository;
     @Test
     public void testUser(){
         UserEntity userEntity=userRepository.findByUid(1);
@@ -67,7 +70,8 @@ public class TestDao {
         conversationEntity.setCustomer(userEntity1);
         UserEntity userEntity2=new UserEntity();
         userEntity2.setUid(2);
-        conversationEntity.setCustomer(userEntity1);
+        conversationEntity.setStaff(userEntity1);
+        conversationRepository.save(conversationEntity);
     }
 
 }

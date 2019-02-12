@@ -91,7 +91,7 @@ public class WebConfig implements WebMvcConfigurer {
      * @return
      */
     ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("奇迹公司跨平台聊天工具").description("前后端联调api 文档").version("0.1.1")
+        return new ApiInfoBuilder().title("奇迹公司跨平台聊天工具").description("前后端联调api 文档").version("1.1.1")
                 .build();
     }
     @Override

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import service.AnswerService;
 
@@ -26,7 +27,7 @@ public class AnswerController {
 
     @ApiOperation("获取所有答案")
     @RequestMapping(value = "/findAllAnswer",method = RequestMethod.POST)
-    public List<AnswerEntity> findAllAnswer(int pageSize,int pageNum){
+    public List<AnswerEntity> findAllAnswer(@RequestParam(defaultValue = "1")int pageNum, @RequestParam(defaultValue = "20")int pageSize){
         return answerService.answerList(PageRequest.of(pageNum-1, pageSize));
     }
 

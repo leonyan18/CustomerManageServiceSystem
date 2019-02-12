@@ -47,7 +47,9 @@ public class ProblemController {
 
     @ApiOperation(value = "问题列表",notes = "关键词搜索和类别")
     @RequestMapping(value = "problemList", method = RequestMethod.POST)
-    public List<ProblemEntity> problemList(@RequestParam(defaultValue = "")String keyword, int pageNum, int pageSize,@RequestParam(defaultValue = "0")int classificationId) {
+    public List<ProblemEntity> problemList(@RequestParam(defaultValue = "")String keyword,
+                                           @RequestParam(defaultValue = "1")int pageNum, @RequestParam(defaultValue = "20")int pageSize,
+                                           @RequestParam(defaultValue = "0")int classificationId) {
         keyword="%"+keyword+"%";
         return problemService.findAllProblemByKeywordAndClassification(keyword, PageRequest.of(pageNum-1,pageSize),classificationId);
     }
@@ -59,12 +61,10 @@ public class ProblemController {
         return problemService.countAllByContentLikeAndClassification_Cid(keyword, classificationId);
     }
 
-    @ApiOperation(value = "更新问题",notes = "需上传答案id和类别id")
+    @ApiOperation(value = "更新问题")
     @RequestMapping(value = "updateProblem", method = RequestMethod.POST)
     public void updateProblem(ProblemEntity problemEntity) {
-        if(problemEntity.getPid()==0
-                ||problemEntity.getClassification().getCid()==0
-                ||problemEntity.getAnswer().getAid()==0){
+        if(problemEntity.getPid()==0){
             throw LogicException.le(ErrorMessage.WRONG_FORMAT);
         }else{
             problemService.updateProblem(problemEntity);

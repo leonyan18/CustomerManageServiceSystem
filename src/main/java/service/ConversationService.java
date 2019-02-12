@@ -1,6 +1,8 @@
 package service;
 
 import DTO.ConversationDTO;
+import entity.ConversationEntity;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -10,6 +12,6 @@ public interface ConversationService {
      * @param
      * @return java.util.List<DTO.ConversationDTO>
      */
-    List<ConversationDTO> findAllConversation();
-    void startConversation();
+    List<ConversationDTO> findAllConversation(Pageable pageable);
+    void startConversation(int customerId,int staffId);
 }

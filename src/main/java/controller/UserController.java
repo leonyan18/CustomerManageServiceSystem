@@ -2,6 +2,7 @@ package controller;
 
 import DTO.UserDTO;
 import entity.UserEntity;
+import entity.UserType;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -48,34 +49,35 @@ public class UserController {
         userService.deleteStaff(uid);
     }
 
-    @ApiOperation(value = "查找所有用户")
-    @RequestMapping(value = "findAllUser", method = RequestMethod.POST)
-    public List<UserDTO> findAllUser() {
-        return userService.findAllUser();
-    }
-
-    @ApiOperation(value = "查找所有客服")
-    @RequestMapping(value = "findAllStaff", method = RequestMethod.POST)
-    public List<UserDTO> findAllStaff() {
-        return userService.findAllStaff();
-    }
-
     @ApiOperation(value = "根据关键词查找用户",notes = "没有关键词也可")
     @RequestMapping(value = "findAllUserByKeyword", method = RequestMethod.POST)
-    public List<UserDTO> findAllUserByKey(@ApiParam(required = false) @RequestParam(defaultValue = "") String keyword, int pageNum, int pageSize) {
+    public List<UserDTO> findAllUserByKeyword( @RequestParam(defaultValue = "") String keyword, @RequestParam(defaultValue = "1")int pageNum, @RequestParam(defaultValue = "20")int pageSize) {
         keyword="%"+keyword+"%";
         return userService.findAllUserByKeyword(keyword, PageRequest.of(pageNum-1,pageSize));
     }
-
-    @ApiOperation(value = "根据关键词查找客服",notes = "没有关键词也可")
-    @RequestMapping(value = "findAllStaffByKeyword", method = RequestMethod.POST)
-    public List<UserDTO> findAllStaffByKeyword(@ApiParam(required = false) @RequestParam(defaultValue = "")String keyword, int pageNum, int pageSize) {
+    @ApiOperation(value = "根据关键词查找客服数目",notes = "没有关键词也可")
+    @RequestMapping(value = "countAllUserByKeyword", method = RequestMethod.POST)
+    public long countAllUserByKeyword( @RequestParam(defaultValue = "")String keyword) {
         keyword="%"+keyword+"%";
-        return userService.findAllStaffByKeyword(keyword,PageRequest.of(pageNum-1,pageSize));
+        return userService.countAllUserByKeyword(keyword);
+    }
+
+    @ApiOperation(value = "根据关键词查找对应类型用户",notes = "没有关键词也可")
+    @RequestMapping(value = "findAllUserByKeywordAndType", method = RequestMethod.POST)
+    public List<UserDTO> findAllUserByKeywordAndType(UserType type, @RequestParam(defaultValue = "")String keyword, @RequestParam(defaultValue = "1")int pageNum, @RequestParam(defaultValue = "20")int pageSize) {
+        keyword="%"+keyword+"%";
+        return userService.findAllUserByKeywordAndType(type,keyword,PageRequest.of(pageNum-1,pageSize));
+    }
+
+    @ApiOperation(value = "根据关键词查找对应类型用户数目",notes = "没有关键词也可")
+    @RequestMapping(value = "countAllUserByKeywordAndType", method = RequestMethod.POST)
+    public long countAllUserByKeywordAndType(UserType type,@RequestParam(defaultValue = "")String keyword) {
+        keyword="%"+keyword+"%";
+        return userService.countAllUserByKeywordAndType(type, keyword);
     }
     @ApiOperation(value = "更新用户信息")
     @RequestMapping(value = "updateUser", method = RequestMethod.POST)
-    public void findAllStaffByKeyword(UserDTO userDTO) {
+    public void updateUser(UserDTO userDTO) {
         if ("".equals(userDTO.getUsername())||userDTO.getType()!=null) {
             throw LogicException.le(ErrorMessage.WRONG_FORMAT);
         }

@@ -26,32 +26,31 @@ public class UserServiceImpl implements UserService {
     @Override
     public int addUser(UserEntity userEntity) {
         userEntity.setCreateTime(new Date(System.currentTimeMillis()));
-        return  userRepository.save(userEntity).getUid();
+        return userRepository.save(userEntity).getUid();
     }
 
     @Override
     public void addStaff(int uid) {
-        UserEntity userEntity=userRepository.findByUid(uid);
-        if(userEntity!=null){
-            if(userEntity.getType()== UserType.USER){
+        UserEntity userEntity = userRepository.findByUid(uid);
+        if (userEntity != null) {
+            if (userEntity.getType() == UserType.USER) {
                 userEntity.setType(UserType.STAFF);
                 userRepository.save(userEntity);
             }
-        }else{
+        } else {
             throw LogicException.le(ErrorMessage.NO_SUCH_ENTITY);
         }
     }
 
     @Override
     public void deleteStaff(int uid) {
-        UserEntity userEntity=userRepository.findByUid(uid);
-        if(userEntity!=null){
-            if(userEntity.getType()== UserType.STAFF){
+        UserEntity userEntity = userRepository.findByUid(uid);
+        if (userEntity != null) {
+            if (userEntity.getType() == UserType.STAFF) {
                 userEntity.setType(UserType.USER);
                 userRepository.save(userEntity);
             }
-        }
-        else {
+        } else {
             throw LogicException.le(ErrorMessage.NO_SUCH_ENTITY);
         }
     }
@@ -72,14 +71,24 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<UserDTO> findAllStaffByKeyword(String keyword, Pageable pageable) {
-        return userRepository.findAllStaffByKeyword(keyword, pageable);
+    public List<UserDTO> findAllUserByKeywordAndType(UserType type, String keyword, Pageable pageable) {
+        return userRepository.findAllUserByKeywordAndType(type,keyword, pageable);
+    }
+
+    @Override
+    public long countAllUserByKeyword(String keyword) {
+        return userRepository.countAllUserByKeyword(keyword);
+    }
+
+    @Override
+    public long countAllUserByKeywordAndType(UserType type, String keyword) {
+        return userRepository.countAllUserByKeywordAndType(type,keyword);
     }
 
     @Override
     public void updateUser(UserDTO userDTO) {
-        UserEntity userEntity=userRepository.findByUid(userDTO.getUid());
-        if(userEntity==null){
+        UserEntity userEntity = userRepository.findByUid(userDTO.getUid());
+        if (userEntity == null) {
             throw LogicException.le(ErrorMessage.NO_SUCH_ENTITY);
         }
         userEntity.setType(userDTO.getType());
@@ -87,9 +96,9 @@ public class UserServiceImpl implements UserService {
         userRepository.save(userEntity);
     }
 
-    public List<UserDTO> convertTo(List<UserEntity> userEntities){
-        List<UserDTO> userDTOS=new ArrayList<>();
-        for (UserEntity u:userEntities) {
+    public List<UserDTO> convertTo(List<UserEntity> userEntities) {
+        List<UserDTO> userDTOS = new ArrayList<>();
+        for (UserEntity u : userEntities) {
             userDTOS.add((new UserDTO(u)));
         }
         return userDTOS;

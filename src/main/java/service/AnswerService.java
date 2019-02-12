@@ -8,5 +8,6 @@ import java.util.List;
 public interface AnswerService {
     int addAnswer(AnswerEntity answerEntity);
     List<AnswerEntity> answerList(Pageable pageable);
+    long countAnswer();
     void deleteAnswer(int aid);
 }

@@ -6,6 +6,7 @@ import dao.AnswerRepository;
 import dao.ClassificationRepository;
 import dao.ProblemRepository;
 import entity.AnswerEntity;
+import entity.ClassificationEntity;
 import entity.ProblemEntity;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -80,15 +81,24 @@ public class ProblemServiceImpl implements ProblemService {
 
     @Override
     public void updateProblem(ProblemEntity problemEntity) {
-        if (problemRepository.existsById(problemEntity.getPid())
-                && answerRepository.existsById(problemEntity.getAnswer().getAid())
-                && classificationRepository.existsById(problemEntity.getClassification().getCid())) {
+        if (problemRepository.existsById(problemEntity.getPid())) {
             ProblemEntity problemEntity1 = problemRepository.findByPid(problemEntity.getPid());
+            AnswerEntity answer=problemEntity.getAnswer();
+            ClassificationEntity classification=problemEntity.getClassification();
             if ("".equals(problemEntity.getContent())) {
                 problemEntity1.setContent(problemEntity.getContent());
             }
-            problemEntity1.getClassification().setCid(problemEntity.getClassification().getCid());
-            problemEntity1.getAnswer().setAid(problemEntity.getAnswer().getAid());
+            if(classification!=null&& classificationRepository.existsById(classification.getCid())) {
+                problemEntity1.getClassification().setCid(classification.getCid());
+            }
+            if(answer!=null&& answerRepository.existsById(answer.getAid())) {
+                AnswerEntity answerEntity=answerRepository.findByAid(answer.getAid());
+                answerEntity.setContent(answer.getContent());
+                answerEntity.setUpdateTime(new Date(System.currentTimeMillis()));
+                answerRepository.save(answerEntity);
+                problemEntity1.getAnswer().setAid(problemEntity.getAnswer().getAid());
+            }
+            problemEntity1.setContent(problemEntity.getContent());
             problemEntity1.setUpdateTime(new Date(System.currentTimeMillis()));
             problemRepository.save(problemEntity1);
         } else {

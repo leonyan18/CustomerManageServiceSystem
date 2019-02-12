@@ -34,6 +34,11 @@ public class AnswerServiceImpl implements AnswerService {
     }
 
     @Override
+    public long countAnswer() {
+        return answerRepository.count();
+    }
+
+    @Override
     public void deleteAnswer(int aid) {
         if(answerRepository.existsById(aid)){
             answerRepository.deleteById(aid);
