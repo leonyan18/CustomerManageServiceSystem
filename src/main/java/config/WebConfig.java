@@ -1,6 +1,7 @@
 package config;
 
 import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
+import interceptor.BaseInterceptor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,9 +40,10 @@ import java.util.List;
 @Configuration
 @EnableWebMvc
 @EnableSwagger2
-@ComponentScan(basePackages = {"controller","config","foundation"})
+@ComponentScan(basePackages = {"controller", "config", "foundation"})
 public class WebConfig implements WebMvcConfigurer {
     private static final Logger logger = LogManager.getLogger(WebConfig.class);
+
     /**
      * 配置视图解析器
      */
@@ -54,9 +56,15 @@ public class WebConfig implements WebMvcConfigurer {
     }
 
     @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new BaseInterceptor());
+    }
+
+    @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
+
     @Bean
     public Docket customDocket() {
         /*
@@ -86,14 +94,17 @@ public class WebConfig implements WebMvcConfigurer {
                 .globalOperationParameters(pars).
                         apiInfo(apiInfo());
     }
+
     /**
      * 这个是设置大标题小标题
+     *
      * @return
      */
     ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("奇迹公司跨平台聊天工具").description("前后端联调api 文档").version("1.1.1")
                 .build();
     }
+
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
         Jackson2ObjectMapperBuilder builder = new Jackson2ObjectMapperBuilder()
