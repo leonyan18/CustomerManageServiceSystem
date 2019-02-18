@@ -9,6 +9,9 @@ import util.ErrorMessage;
 import util.LogicException;
 
 import java.util.List;
+/**
+ * @author yan
+ */
 @Service
 public class AnnouncementServiceImpl implements AnnouncementService{
     private final AnnouncementRepository announcementRepository;

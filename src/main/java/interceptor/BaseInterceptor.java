@@ -14,10 +14,8 @@ public class BaseInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-
         response.addHeader("Access-Control-Allow-Origin", "*");
         response.addHeader("Access-Control-Allow-Methods", "POST");
         return true;

@@ -11,36 +11,61 @@
 <script src="//cdn.jsdelivr.net/sockjs/1.0.0/sockjs.min.js"></script>
 <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="<s:url value="/resources/stomp.js"/>"></script>
+<input id="name">
+<button id="btn">开启</button>
+<div id="message"></div>
 <script>
-    var url='http://'+window.location.host+'/marcopolo';
-    var socket=new SockJS(url);
-    console.info(socket.url);
-    var stomp=Stomp.over(socket);
-    var payload=JSON.stringify({'message':'Marco!'});
-    stomp.connect('guest','guest',function (frame) {
-        stomp.send("/app/marco",{},payload);
-        stomp.subscribe("/topic/marco",handleOneTime)
-    });
-    function handleOneTime(message) {
-        console.log('Received: ', message);
-        sayMarco();
-    }
-    function handlePolo(message) {
-        console.log('Received: ', message);
-        if (JSON.parse(message.body).message === 'Polo!') {
-            setTimeout(function(){sayMarco()}, 2000);
+    $("#btn").click(function () {
+        var url='http://'+window.location.host+'/marcopolo';
+        var socket=new SockJS(url);
+        console.info(socket.url);
+        var stomp=Stomp.over(socket);
+        var payload=JSON.stringify({'message':'Marco!'});
+        var id=$("#name").val();
+        stomp.connect(
+            {
+                name: id // 携带客户端信息
+            },
+            function connectCallback(frame) {
+                // 连接成功时（服务器响应 CONNECTED 帧）的回调方法
+                setMessageInnerHTML("连接成功");
+                stomp.send("/app/marco",{},payload);
+                stomp.subscribe("/topic/marco",handleOneTime);
+                stomp.subscribe("/user/queue/notifications",handleMessage);
+            },
+            function errorCallBack(error) {
+                // 连接失败时（服务器响应 ERROR 帧）的回调方法
+                setMessageInnerHTML("连接失败");
+            }
+        );
+        // stomp.connect({name:id},'guest','guest',function (frame) {
+        //     stomp.send("/app/marco",{},payload);
+        //     stomp.subscribe("/topic/marco",handleOneTime);
+        //     stomp.subscribe("/user/queue/notifications",handleMessage);
+        // });
+        function handleOneTime(message) {
+            console.log('Received: ', message);
+            stomp.send("/app/message", {},
+                JSON.stringify({'from': 1,'to': 2,'content':"12121"}));
+            // sayMarco();
         }
-    }
-    function sayMarco() {
-        console.log('Sending Marco!');
-        stomp.send("/app/marco", {},
-            JSON.stringify({ 'message': 'Marco!' }));
-    }
+        function handleMessage(message) {
+            console.log('Received: ', message.body);
+            setMessageInnerHTML(message.body);
+        }
+        function handlePolo(message) {
+            console.log('Received: ', message);
+            if (JSON.parse(message.body).message === 'Polo!') {
+                setTimeout(function(){sayMarco()}, 2000);
+            }
+        }
+        function sayMarco() {
+            console.log('Sending Marco!');
+            stomp.send("/app/marco", {},
+                JSON.stringify({ 'message': 'Marco!' }));
+        }
+        function setMessageInnerHTML(innerHTML) {
+            document.getElementById('message').innerHTML += innerHTML + '<br/>';
+        }
+    });
 </script>
-<form method="post" action="http://upload.qiniup.com/"
-      enctype="multipart/form-data">
-    <input name="key" type="hidden" value="1160299279/第一次试验/">
-    <input name="token" type="hidden" value="0ygyCNdhOs4z9SOcS5uBYMo5sv80imPMeb3LhsPQ:nmR0ClGdPvSaXu3XcxEuLIZRKSA=:eyJzY29wZSI6ImpvYi1tYW5hZ2VtZW50LXN5c3RlbS1iYXNlZC1vbi1vcGVuLWNsb3VkLXN0b3JhZ2UiLCJkZWFkbGluZSI6MTU0MjAyMTI0N30=">
-    <input name="file" type="file" />
-    <input type="submit" value="上传文件" />
-</form>

@@ -6,6 +6,9 @@ import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
+/**
+ * @author yan
+ */
 public interface ConversationService {
     /**
      * description:获取所有的对话
