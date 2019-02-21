@@ -1,9 +1,13 @@
 package websocket;
 
+import java.util.Date;
+
 public class Msg {
     private int from;
     private int to;
     private String content;
+    private Date sendTime;
+    private int cid;
 
     public int getFrom() {
         return from;
@@ -31,10 +35,28 @@ public class Msg {
 
     @Override
     public String toString() {
-        return "{" +
+        return "Msg{" +
                 "from=" + from +
                 ", to=" + to +
                 ", content='" + content + '\'' +
+                ", sendTime=" + sendTime +
+                ", cid=" + cid +
                 '}';
+    }
+
+    public Date getSendTime() {
+        return sendTime;
+    }
+
+    public void setSendTime(Date sendTime) {
+        this.sendTime = sendTime;
+    }
+
+    public int getCid() {
+        return cid;
+    }
+
+    public void setCid(int cid) {
+        this.cid = cid;
     }
 }

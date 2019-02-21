@@ -36,8 +36,25 @@ public class ConversationServiceImpl implements ConversationService{
         UserEntity userEntity2=new UserEntity();
         userEntity2.setUid(staffId);
         conversationEntity.setStaff(userEntity2);
+        conversationEntity.setStatus(true);
         conversationEntity.setStarttime(new Date(System.currentTimeMillis()));
         conversationRepository.save(conversationEntity);
+    }
+
+    @Override
+    public void endConversation(int customerId,double evaluate) {
+        ConversationEntity conversationEntity=conversationRepository.findByCid(customerId);
+        if (evaluate!=0.0) {
+            conversationEntity.setEvaluate(evaluate);
+        }
+        conversationEntity.setStatus(false);
+        conversationEntity.setEndtime(new Date(System.currentTimeMillis()));
+        conversationRepository.save(conversationEntity);
+    }
+
+    @Override
+    public long countConversation() {
+        return conversationRepository.count();
     }
 
 }

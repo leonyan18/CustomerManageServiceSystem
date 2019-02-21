@@ -1049,19 +1049,19 @@
       <DataType>float(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="233" name="state">
+    <column id="262" parent="233" name="starttime">
       <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="233" name="starttime">
+    <column id="263" parent="233" name="endtime">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="233" name="endtime">
+    <column id="264" parent="233" name="status">
       <Position>7</Position>
-      <DataType>datetime|0s</DataType>
+      <DataType>bit(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="265" parent="233" name="customer">
@@ -1175,20 +1175,29 @@
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="285" parent="235" name="sender">
+    <column id="285" parent="235" name="receiver_id">
+      <Position>6</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="286" parent="235" name="sender">
       <ColNames>sender_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="286" parent="235" name="conversation">
+    <index id="287" parent="235" name="conversation">
       <ColNames>conversation_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="287" parent="235" name="PRIMARY">
+    <index id="288" parent="235" name="receiver">
+      <ColNames>receiver_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="289" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>mid</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="288" parent="235" name="sender">
+    <foreign-key id="290" parent="235" name="sender">
       <ColNames>sender_id</ColNames>
       <RefSchemaName>CustomerServiceSystem</RefSchemaName>
       <RefTableName>user</RefTableName>
@@ -1196,7 +1205,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="289" parent="235" name="conversation">
+    <foreign-key id="291" parent="235" name="conversation">
       <ColNames>conversation_id</ColNames>
       <RefSchemaName>CustomerServiceSystem</RefSchemaName>
       <RefTableName>conversation</RefTableName>
@@ -1204,75 +1213,83 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="290" parent="236" name="mid">
+    <foreign-key id="292" parent="235" name="receiver">
+      <ColNames>receiver_id</ColNames>
+      <RefSchemaName>CustomerServiceSystem</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>uid</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="293" parent="236" name="mid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="236" name="name">
+    <column id="294" parent="236" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="292" parent="236" name="PRIMARY">
+    <key id="295" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>mid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="293" parent="237" name="pid">
+    <column id="296" parent="237" name="pid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="237" name="content">
+    <column id="297" parent="237" name="content">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="237" name="answer_id">
+    <column id="298" parent="237" name="answer_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="237" name="keywords">
+    <column id="299" parent="237" name="keywords">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="237" name="update_time">
+    <column id="300" parent="237" name="update_time">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="298" parent="237" name="create_time">
+    <column id="301" parent="237" name="create_time">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="299" parent="237" name="classification_id">
+    <column id="302" parent="237" name="classification_id">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="300" parent="237" name="answerid">
+    <index id="303" parent="237" name="answerid">
       <ColNames>answer_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="301" parent="237" name=" classificationid">
+    <index id="304" parent="237" name=" classificationid">
       <ColNames>classification_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="302" parent="237" name="PRIMARY">
+    <key id="305" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>pid</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="303" parent="237" name="answerid">
+    <foreign-key id="306" parent="237" name="answerid">
       <ColNames>answer_id</ColNames>
       <RefSchemaName>CustomerServiceSystem</RefSchemaName>
       <RefTableName>answer</RefTableName>
@@ -1280,7 +1297,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="304" parent="237" name=" classificationid">
+    <foreign-key id="307" parent="237" name=" classificationid">
       <ColNames>classification_id</ColNames>
       <RefSchemaName>CustomerServiceSystem</RefSchemaName>
       <RefTableName>classification</RefTableName>
@@ -1288,54 +1305,54 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="305" parent="238" name="uid">
+    <column id="308" parent="238" name="uid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="238" name="username">
+    <column id="309" parent="238" name="username">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="238" name="password">
+    <column id="310" parent="238" name="password">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="238" name="type">
+    <column id="311" parent="238" name="type">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="238" name="identitycard">
+    <column id="312" parent="238" name="identitycard">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="238" name="name">
+    <column id="313" parent="238" name="name">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="238" name="balance">
+    <column id="314" parent="238" name="balance">
       <Position>7</Position>
       <DataType>double(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="238" name="create_time">
+    <column id="315" parent="238" name="create_time">
       <Position>8</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="238" name="last_login_time">
+    <column id="316" parent="238" name="last_login_time">
       <Position>9</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="314" parent="238" name="PRIMARY">
+    <key id="317" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>uid</ColNames>
       <Primary>1</Primary>

@@ -1,17 +1,37 @@
 package entity;
 
+import websocket.Msg;
+
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Table(name = "message", schema = "CustomerServiceSystem", catalog = "")
 public class MessageEntity implements Serializable {
     private int mid;
     private String content;
-    private Timestamp sendtime;
+    private Date sendtime;
     private ConversationEntity conversation;
     private UserEntity sender;
+    private UserEntity receiver;
+
+    public MessageEntity() {
+    }
+
+    public MessageEntity(Msg msg) {
+        this.content=msg.getContent();
+        this.sendtime=msg.getSendTime();
+        UserEntity sender=new UserEntity();
+        sender.setUid(msg.getFrom());
+        this.sender=sender;
+        UserEntity receiver=new UserEntity();
+        receiver.setUid(msg.getTo());
+        this.receiver=receiver;
+        ConversationEntity conversationEntity=new ConversationEntity();
+        conversationEntity.setCid(msg.getCid());
+        this.conversation=conversationEntity;
+    }
 
     @Id
     @Column(name = "mid")
@@ -36,12 +56,42 @@ public class MessageEntity implements Serializable {
 
     @Basic
     @Column(name = "sendtime")
-    public Timestamp getSendtime() {
+    public Date getSendtime() {
         return sendtime;
     }
 
-    public void setSendtime(Timestamp sendtime) {
+    public void setSendtime(Date sendtime) {
         this.sendtime = sendtime;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "conversation_id", referencedColumnName = "cid")
+    public ConversationEntity getConversation() {
+        return conversation;
+    }
+
+    public void setConversation(ConversationEntity conversationId) {
+        this.conversation = conversationId;
+    }
+
+    @OneToOne
+    @JoinColumn(name = "sender_id", referencedColumnName = "uid")
+    public UserEntity getSender() {
+        return sender;
+    }
+
+    public void setSender(UserEntity senderId) {
+        this.sender = senderId;
+    }
+
+    @OneToOne
+    @JoinColumn(name = "receiver_id", referencedColumnName = "uid")
+    public UserEntity getReceiver() {
+        return receiver;
+    }
+
+    public void setReceiver(UserEntity receiver) {
+        this.receiver = receiver;
     }
 
     @Override
@@ -64,25 +114,5 @@ public class MessageEntity implements Serializable {
         result = 31 * result + (content != null ? content.hashCode() : 0);
         result = 31 * result + (sendtime != null ? sendtime.hashCode() : 0);
         return result;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "conversation_id", referencedColumnName = "cid")
-    public ConversationEntity getConversation() {
-        return conversation;
-    }
-
-    public void setConversation(ConversationEntity conversationId) {
-        this.conversation = conversationId;
-    }
-
-    @OneToOne
-    @JoinColumn(name = "sender_id", referencedColumnName = "uid")
-    public UserEntity getSender() {
-        return sender;
-    }
-
-    public void setSender(UserEntity senderId) {
-        this.sender = senderId;
     }
 }
