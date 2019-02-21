@@ -8,8 +8,8 @@ import entity.AnswerEntity;
 import entity.ClassificationEntity;
 import entity.ProblemEntity;
 import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -24,7 +24,7 @@ import java.util.List;
  */
 @Service
 public class ProblemServiceImpl implements ProblemService {
-    private static final Logger logger = LoggerFactory.getLogger(ProblemServiceImpl.class);
+    private static final Logger logger = LogManager.getLogger(ProblemServiceImpl.class);
     private final ProblemRepository problemRepository;
     private final AnswerRepository answerRepository;
     private final ClassificationRepository classificationRepository;

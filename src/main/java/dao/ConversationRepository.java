@@ -19,4 +19,6 @@ public interface ConversationRepository extends JpaRepository<ConversationEntity
     List<ConversationDTO> findAllConversation(Pageable pageable);
 
     ConversationEntity findByCid(int cid);
+    @Query("select avg(c.evaluate) FROM ConversationEntity c where c.staff.uid=?1 group by c.staff.uid")
+    Double getMeanEvaluate(int uid);
 }

@@ -3,8 +3,8 @@ package controller;
 import DTO.MessageDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -26,19 +26,15 @@ import java.util.List;
  * @descripition
  */
 @RestController
-@Api
+@Api(tags = "消息接口")
 @RequestMapping("message")
 public class MessageController {
     private final MessageService messageService;
-    private static final Logger logger = LoggerFactory.getLogger(MessageController.class);
-    private final SimpUserRegistry userRegistry;
-    private final WebSocketMessageBrokerStats webSocketMessageBrokerStats;
+    private static final Logger logger = LogManager.getLogger(MessageController.class);
 
     @Autowired
-    public MessageController(MessageService messageService, SimpUserRegistry userRegistry, WebSocketMessageBrokerStats webSocketMessageBrokerStats) {
+    public MessageController(MessageService messageService) {
         this.messageService = messageService;
-        this.userRegistry = userRegistry;
-        this.webSocketMessageBrokerStats = webSocketMessageBrokerStats;
     }
 
     @MessageMapping("/marco")

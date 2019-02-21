@@ -64,6 +64,7 @@ public class TestDao {
 
     @Test
     public void testConversation(){
+        System.out.println(conversationRepository.getMeanEvaluate(1));
         ConversationEntity conversationEntity=new ConversationEntity();
         UserEntity userEntity1=new UserEntity();
         userEntity1.setUid(1);

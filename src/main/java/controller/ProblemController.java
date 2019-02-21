@@ -6,8 +6,8 @@ import entity.ProblemEntity;
 import entity.UserEntity;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.parsing.Problem;
 import org.springframework.beans.factory.parsing.ProblemReporter;
@@ -27,7 +27,7 @@ import java.util.List;
 @RequestMapping("problem")
 public class ProblemController {
     private final ProblemService problemService;
-    private static final Logger logger = LoggerFactory.getLogger(ProblemController.class);
+    private static final Logger logger = LogManager.getLogger(ProblemController.class);
     @Autowired
     public ProblemController(ProblemService problemService) {
         this.problemService = problemService;

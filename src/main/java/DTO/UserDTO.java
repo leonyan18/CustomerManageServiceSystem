@@ -15,6 +15,15 @@ public class UserDTO {
     private Date createTime;
     private Date lastLoginTime;
     private Double balance;
+    private Double meanEvaluate;
+
+    public Double getMeanEvaluate() {
+        return meanEvaluate;
+    }
+
+    public void setMeanEvaluate(Double meanEvaluate) {
+        this.meanEvaluate = meanEvaluate;
+    }
 
     public Double getBalance() {
         return balance;

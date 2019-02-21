@@ -25,9 +25,11 @@ public class UserInterceptor extends ChannelInterceptorAdapter {
             Object raw = message.getHeaders().get(SimpMessageHeaderAccessor.NATIVE_HEADERS);
             if (raw instanceof Map) {
                 Object name = ((Map) raw).get("name");
+                Object conversationId = ((Map) raw).get("conversationId");
                 if (name instanceof LinkedList) {
                     // 设置当前访问器的认证用户
-                    accessor.setUser(new User(((LinkedList) name).get(0).toString()));
+                    accessor.setUser(new User(((LinkedList) name).get(0).toString(),
+                            Integer.parseInt(((LinkedList) conversationId).get(0).toString())));
                 }
             }
         }

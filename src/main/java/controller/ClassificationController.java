@@ -3,8 +3,8 @@ package controller;
 import entity.ClassificationEntity;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,7 +22,7 @@ import java.util.List;
 @RequestMapping("Classification")
 public class ClassificationController {
     private final ClassificationService classificationService;
-    private static final Logger logger = LoggerFactory.getLogger(ProblemController.class);
+    private static final Logger logger = LogManager.getLogger(ProblemController.class);
     @Autowired
     public ClassificationController(ClassificationService classificationService) {
         this.classificationService = classificationService;

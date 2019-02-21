@@ -1,6 +1,7 @@
 package service;
 
 import DTO.UserDTO;
+import dao.ConversationRepository;
 import dao.UserRepository;
 import entity.UserEntity;
 import entity.UserType;
@@ -17,10 +18,12 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
+    private final ConversationRepository conversationRepository;
 
     @Autowired
-    public UserServiceImpl(UserRepository userRepository) {
+    public UserServiceImpl(UserRepository userRepository, ConversationRepository conversationRepository) {
         this.userRepository = userRepository;
+        this.conversationRepository = conversationRepository;
     }
 
     @Override
@@ -72,7 +75,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<UserDTO> findAllUserByKeywordAndType(UserType type, String keyword, Pageable pageable) {
-        return userRepository.findAllUserByKeywordAndType(type,keyword, pageable);
+        List<UserDTO> userDTOS=userRepository.findAllUserByKeywordAndType(type,keyword, pageable);
+        if (type==UserType.STAFF) {
+            for (UserDTO u:userDTOS) {
+                u.setMeanEvaluate(conversationRepository.getMeanEvaluate(u.getUid()));
+            }
+        }
+        return userDTOS;
     }
 
     @Override

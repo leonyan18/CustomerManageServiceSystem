@@ -47,6 +47,9 @@ public class ConversationServiceImpl implements ConversationService{
         if (evaluate!=0.0) {
             conversationEntity.setEvaluate(evaluate);
         }
+        if(!conversationEntity.getStatus()){
+            return;
+        }
         conversationEntity.setStatus(false);
         conversationEntity.setEndtime(new Date(System.currentTimeMillis()));
         conversationRepository.save(conversationEntity);

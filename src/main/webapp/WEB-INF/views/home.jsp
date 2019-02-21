@@ -20,18 +20,18 @@
         var socket=new SockJS(url);
         console.info(socket.url);
         var stomp=Stomp.over(socket);
-        var payload=JSON.stringify({'message':'Marco!'});
         var id=$("#name").val();
         stomp.connect(
             {
-                name: id // 携带客户端信息
+                name: id,
+                conversationId:1
             },
             function connectCallback(frame) {
                 // 连接成功时（服务器响应 CONNECTED 帧）的回调方法
                 setMessageInnerHTML("连接成功");
+                stomp.subscribe("/user/queue/notifications",handleMessage);
                 stomp.send("/app/message", {},
                     JSON.stringify({'from': 1,'to': 2,'content':"12121",'cid':1}));
-                stomp.subscribe("/user/queue/notifications",handleMessage);
             },
             function errorCallBack(error) {
                 // 连接失败时（服务器响应 ERROR 帧）的回调方法
