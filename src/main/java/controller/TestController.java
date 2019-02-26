@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author yan
  */
 @Controller
-@Api
+@Api(tags="错误信息表以及websocket测试页")
 public class TestController {
     @RequestMapping(value = "/home",method = RequestMethod.GET)
     @ApiOperation("websocket 测试页")

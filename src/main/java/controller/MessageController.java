@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.annotation.SendToUser;
 import org.springframework.messaging.simp.user.SimpUserRegistry;
@@ -68,4 +69,9 @@ public class MessageController {
     public List<MessageDTO> findChatRecord(int cid, @RequestParam(defaultValue = "1") int pageNum, @RequestParam(defaultValue = "20") int pageSize) {
         return messageService.findChatRecord(cid, PageRequest.of(pageNum - 1, pageSize));
     }
+    @MessageExceptionHandler
+    public void handleMessageException(Throwable t){
+        logger.error("Error handling messsage"+t.getMessage());
+    }
+
 }
