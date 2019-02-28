@@ -31,7 +31,7 @@
                 setMessageInnerHTML("连接成功");
                 stomp.subscribe("/user/queue/notifications",handleMessage);
                 stomp.send("/app/message", {},
-                    JSON.stringify({'from': 1,'to': 2,'content':"12121",'cid':1}));
+                    JSON.stringify({'from': 3,'to': 4,'content':"12121",'cid':1}));
             },
             function errorCallBack(error) {
                 // 连接失败时（服务器响应 ERROR 帧）的回调方法

@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.HttpSession;
+
 /**
  * @author yan
  */
@@ -14,7 +16,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class TestController {
     @RequestMapping(value = "/home",method = RequestMethod.GET)
     @ApiOperation("websocket 测试页")
-    public String home(){
+    public String home(HttpSession httpSession){
+        httpSession.setAttribute("userId",4);
         return "home";
     }
 

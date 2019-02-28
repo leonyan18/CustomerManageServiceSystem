@@ -28,17 +28,18 @@ public class ConversationServiceImpl implements ConversationService{
     }
 
     @Override
-    public void startConversation(int customerId,int staffId) {
+    public int startConversation(int customerId) {
         ConversationEntity conversationEntity=new ConversationEntity();
         UserEntity userEntity1=new UserEntity();
         userEntity1.setUid(customerId);
         conversationEntity.setCustomer(userEntity1);
         UserEntity userEntity2=new UserEntity();
-        userEntity2.setUid(staffId);
+        //注意及时修改
+        userEntity2.setUid(matchStaff());
         conversationEntity.setStaff(userEntity2);
         conversationEntity.setStatus(true);
         conversationEntity.setStarttime(new Date(System.currentTimeMillis()));
-        conversationRepository.save(conversationEntity);
+        return conversationRepository.save(conversationEntity).getCid();
     }
 
     @Override
@@ -58,6 +59,11 @@ public class ConversationServiceImpl implements ConversationService{
     @Override
     public long countConversation() {
         return conversationRepository.count();
+    }
+
+    @Override
+    public int matchStaff() {
+        return 3;
     }
 
 }

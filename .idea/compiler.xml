@@ -7,8 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="CSMS" />
-        <module name="CustomerServiceSystem" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CSMS" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

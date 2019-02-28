@@ -21,4 +21,7 @@ public interface ConversationRepository extends JpaRepository<ConversationEntity
     ConversationEntity findByCid(int cid);
     @Query("select avg(c.evaluate) FROM ConversationEntity c where c.staff.uid=?1 group by c.staff.uid")
     Double getMeanEvaluate(int uid);
+
+    @Query("select c.staff.uid FROM ConversationEntity c where c.staff.uid=?1 group by c.staff.uid")
+    Double getStaffId(int uid);
 }

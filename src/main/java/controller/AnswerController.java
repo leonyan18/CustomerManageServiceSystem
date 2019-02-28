@@ -42,4 +42,10 @@ public class AnswerController {
     public void deleteAnswer(int aid){
         answerService.deleteAnswer(aid);
     }
+
+    @ApiOperation("答案数目")
+    @RequestMapping(value = "/countAnswer",method = RequestMethod.POST)
+    public void countAnswer(){
+        answerService.countAnswer();
+    }
 }

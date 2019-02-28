@@ -15,6 +15,7 @@ import org.springframework.web.socket.config.WebSocketMessageBrokerStats;
 import service.ConversationService;
 import service.UserService;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 
@@ -44,9 +45,10 @@ public class ConversationController {
     }
 
     @RequestMapping(value = "/startConversation",method = RequestMethod.POST)
-    @ApiOperation(value="开始对话")
-    public void startConversation(int customerId,@RequestParam(defaultValue = "1") int staffId){
-        conversationService.startConversation(customerId, staffId);
+    @ApiOperation(value="开始对话",notes = "不需要填写任何东西返回的会话id")
+    public int startConversation(@RequestParam(defaultValue = "4")int customerId, HttpSession session){
+        session.setAttribute("userId",customerId);
+        return conversationService.startConversation(customerId);
     }
 
     @RequestMapping(value = "/endConversation",method = RequestMethod.POST)
@@ -60,5 +62,11 @@ public class ConversationController {
         String orgin=webSocketMessageBrokerStats.getWebSocketSessionStatsInfo();
         orgin=orgin.split(" ")[0];
         return orgin;
+    }
+
+    @RequestMapping(value = "/countConversation",method = RequestMethod.POST)
+    @ApiOperation(value="对话数")
+    public void countConversation(){
+        conversationService.countConversation();
     }
 }

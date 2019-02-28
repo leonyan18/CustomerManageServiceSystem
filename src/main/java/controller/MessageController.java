@@ -10,6 +10,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
 import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.messaging.simp.annotation.SendToUser;
 import org.springframework.messaging.simp.user.SimpUserRegistry;
 import org.springframework.stereotype.Controller;
@@ -19,6 +20,7 @@ import service.MessageService;
 import websocket.Msg;
 import websocket.Shout;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -54,7 +56,9 @@ public class MessageController {
 
     @MessageMapping("/message")
     @ApiOperation("消息处理")
-    public void handleMessage(Msg msg) {
+    public void handleMessage(Msg msg, SimpMessageHeaderAccessor headerAccessor) {
+//        msg.setFrom((int)headerAccessor.getSessionAttributes().get("userId"));
+        msg.setFrom(4);
         messageService.sendMsgTo(msg);
     }
 
