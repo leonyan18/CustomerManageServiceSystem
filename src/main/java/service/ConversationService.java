@@ -19,5 +19,5 @@ public interface ConversationService {
     int startConversation(int customerId);
     void endConversation(int customerId,double evaluate);
     long countConversation();
-    int matchStaff();
+    ConversationEntity matchStaff(int conversationId);
 }

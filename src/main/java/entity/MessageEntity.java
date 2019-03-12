@@ -22,12 +22,16 @@ public class MessageEntity implements Serializable {
     public MessageEntity(Msg msg) {
         this.content=msg.getContent();
         this.sendtime=msg.getSendTime();
-        UserEntity sender=new UserEntity();
-        sender.setUid(msg.getFrom());
-        this.sender=sender;
-        UserEntity receiver=new UserEntity();
-        receiver.setUid(msg.getTo());
-        this.receiver=receiver;
+        if(msg.getFrom()!=0) {
+            UserEntity sender=new UserEntity();
+            sender.setUid(msg.getFrom());
+            this.sender=sender;
+        }
+        if(msg.getTo()!=0) {
+            UserEntity receiver=new UserEntity();
+            receiver.setUid(msg.getTo());
+            this.receiver=receiver;
+        }
         ConversationEntity conversationEntity=new ConversationEntity();
         conversationEntity.setCid(msg.getCid());
         this.conversation=conversationEntity;

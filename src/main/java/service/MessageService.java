@@ -7,7 +7,7 @@ import websocket.Msg;
 import java.util.List;
 
 public interface MessageService {
-    void sendMsgTo(Msg msg);
+    void handleMessage(Msg msg);
     long count(int cid);
     List<MessageDTO> findChatRecord(int cid, Pageable pageable);
 }

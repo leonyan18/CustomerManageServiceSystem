@@ -33,10 +33,6 @@ public class ConversationServiceImpl implements ConversationService{
         UserEntity userEntity1=new UserEntity();
         userEntity1.setUid(customerId);
         conversationEntity.setCustomer(userEntity1);
-        UserEntity userEntity2=new UserEntity();
-        //注意及时修改
-        userEntity2.setUid(matchStaff());
-        conversationEntity.setStaff(userEntity2);
         conversationEntity.setStatus(true);
         conversationEntity.setStarttime(new Date(System.currentTimeMillis()));
         return conversationRepository.save(conversationEntity).getCid();
@@ -62,8 +58,12 @@ public class ConversationServiceImpl implements ConversationService{
     }
 
     @Override
-    public int matchStaff() {
-        return 3;
+    public ConversationEntity matchStaff(int conversationId) {
+        ConversationEntity conversationEntity=conversationRepository.findByCid(conversationId);
+        UserEntity userEntity2=new UserEntity();
+        userEntity2.setUid(3);
+        conversationEntity.setStaff(userEntity2);
+        return conversationRepository.save(conversationEntity);
     }
 
 }

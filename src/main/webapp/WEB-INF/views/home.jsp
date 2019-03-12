@@ -16,7 +16,8 @@
 <div id="message"></div>
 <script>
     $("#btn").click(function () {
-        var url='http://'+window.location.host+'/marcopolo';
+        // var url='http://'+window.location.host+'/CSMS/marcopolo';
+        var url='http://localhost:8080/CSMS/marcopolo';
         var socket=new SockJS(url);
         console.info(socket.url);
         var stomp=Stomp.over(socket);
@@ -31,7 +32,9 @@
                 setMessageInnerHTML("连接成功");
                 stomp.subscribe("/user/queue/notifications",handleMessage);
                 stomp.send("/app/message", {},
-                    JSON.stringify({'from': 3,'to': 4,'content':"12121",'cid':1}));
+                    JSON.stringify({'from':id,'content':"12121",'cid':5}));
+                stomp.send("/app/message", {},
+                    JSON.stringify({'from':id,'content':"垃圾",'cid':5}));
             },
             function errorCallBack(error) {
                 // 连接失败时（服务器响应 ERROR 帧）的回调方法

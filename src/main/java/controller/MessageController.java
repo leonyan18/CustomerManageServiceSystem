@@ -56,10 +56,10 @@ public class MessageController {
 
     @MessageMapping("/message")
     @ApiOperation("消息处理")
-    public void handleMessage(Msg msg, SimpMessageHeaderAccessor headerAccessor) {
-//        msg.setFrom((int)headerAccessor.getSessionAttributes().get("userId"));
-        msg.setFrom(4);
-        messageService.sendMsgTo(msg);
+    public void handleMessage(Msg msg) {
+        msg.setFrom(msg.getFrom());
+        logger.info(msg);
+        messageService.handleMessage(msg);
     }
 
     @ApiOperation("消息数目")

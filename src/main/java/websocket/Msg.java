@@ -9,6 +9,10 @@ public class Msg {
     private Date sendTime;
     private int cid;
 
+    public Msg() {
+        this.sendTime=new Date();
+    }
+
     public int getFrom() {
         return from;
     }
@@ -35,7 +39,7 @@ public class Msg {
 
     @Override
     public String toString() {
-        return "Msg{" +
+        return "{" +
                 "from=" + from +
                 ", to=" + to +
                 ", content='" + content + '\'' +
