@@ -1,5 +1,7 @@
 package websocket;
 
+import com.alibaba.fastjson.JSONObject;
+
 import java.util.Date;
 
 public class Msg {

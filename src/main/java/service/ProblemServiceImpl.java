@@ -113,4 +113,9 @@ public class ProblemServiceImpl implements ProblemService {
             return problemRepository.countAllByContentLike(keyword);
         }
     }
+
+    @Override
+    public List<ProblemEntity> findAll() {
+        return problemRepository.findAll();
+    }
 }

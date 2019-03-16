@@ -16,4 +16,5 @@ public interface ProblemService {
     void deleteProblem(int pid);
     void updateProblem(ProblemEntity problemEntity);
     long countAllByContentLikeAndClassification_Cid(String keyword, int cid);
+    List<ProblemEntity> findAll();
 }

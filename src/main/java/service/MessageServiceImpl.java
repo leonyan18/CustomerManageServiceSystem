@@ -1,6 +1,8 @@
 package service;
 
 import DTO.MessageDTO;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import controller.ConversationController;
 import dao.ConversationRepository;
 import dao.MessageRepository;
@@ -53,12 +55,13 @@ public class MessageServiceImpl implements MessageService {
         }
         logger.info(msg.toString());
         MessageEntity messageEntity=new MessageEntity(msg);
+        logger.info(msg.toString());
         messageRepository.save(messageEntity);
         if(conversationEntity.getStaff()!=null) {
             messaging.convertAndSendToUser(""+msg.getTo(),"/queue/notifications",msg.toString());
         }else{
             logger.info(ResultUtil.getSentiment(msg.getContent()));
-            if (ResultUtil.getSentiment(msg.getContent())>=0.0){
+            if (ResultUtil.getSentiment(msg.getContent())>=-0.5){
                 List<ProblemEntity> problemEntityList=problemRepository.findAll();
                 HashMap<String,ProblemEntity> problemEntityHashMap=new HashMap<>();
                 List<String> strings=new ArrayList<>();
@@ -67,14 +70,16 @@ public class MessageServiceImpl implements MessageService {
                     problemEntityHashMap.put(p.getContent(),p);
                 }
                 List<String> newStrs= ResultUtil.getResult(strings,msg.getContent());
-                StringBuilder ans= new StringBuilder();
+                JSONArray jsonArray=new JSONArray();
                 for (String s:newStrs) {
                     ProblemEntity problemEntity=problemEntityHashMap.get(s);
-                    ans.append(problemEntity.getContent()+"\n");
-                    ans.append(problemEntity.getAnswer().getContent()+"\n");
+                    JSONObject jsonObject=new JSONObject();
+                    jsonObject.put("problem",problemEntity.getContent());
+                    jsonObject.put("answer",problemEntity.getAnswer().getContent());
+                    jsonArray.add(jsonObject);
                 }
                 Msg newMsg=new Msg();
-                newMsg.setContent(ans.toString());
+                newMsg.setContent(jsonArray.toString());
                 newMsg.setTo(msg.getFrom());
                 newMsg.setCid(msg.getCid());
                 messaging.convertAndSendToUser(""+newMsg.getTo(),"/queue/notifications",newMsg.toString());
