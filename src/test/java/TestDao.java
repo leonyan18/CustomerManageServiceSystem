@@ -1,8 +1,7 @@
-import DTO.UserDTO;
+import dto.UserDTO;
 import com.huaban.analysis.jieba.JiebaSegmenter;
 import config.DataConfig;
 import config.RootConfig;
-import dao.AnswerRepository;
 import dao.ConversationRepository;
 import dao.ProblemRepository;
 import dao.UserRepository;
@@ -15,6 +14,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import service.AnswerService;
+import service.ConversationService;
 import service.ProblemService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -30,6 +30,8 @@ public class TestDao {
     private AnswerService answerService;
     @Autowired
     private ConversationRepository conversationRepository;
+    @Autowired
+    private ConversationService conversationService;
     @Test
     public void testUser(){
         UserEntity userEntity=userRepository.findByUid(1);
@@ -64,6 +66,8 @@ public class TestDao {
 
     @Test
     public void testConversation(){
+        conversationService.endConversation(1,0.0);
+        System.out.println(conversationRepository.findByCid(1));
         System.out.println(conversationRepository.getMeanEvaluate(1));
         ConversationEntity conversationEntity=new ConversationEntity();
         UserEntity userEntity1=new UserEntity();

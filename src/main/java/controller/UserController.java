@@ -1,11 +1,10 @@
 package controller;
 
-import DTO.UserDTO;
+import dto.UserDTO;
 import entity.UserEntity;
 import entity.UserType;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.RequestMapping;

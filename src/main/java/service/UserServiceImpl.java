@@ -1,6 +1,6 @@
 package service;
 
-import DTO.UserDTO;
+import dto.UserDTO;
 import dao.ConversationRepository;
 import dao.UserRepository;
 import entity.UserEntity;

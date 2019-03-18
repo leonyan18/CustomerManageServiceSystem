@@ -33,8 +33,11 @@
                 stomp.subscribe("/user/queue/notifications",handleMessage);
                 stomp.send("/app/message", {},
                     JSON.stringify({'from':id,'content':"12121",'cid':27}));
-                stomp.send("/app/message", {},
-                    JSON.stringify({'from':id,'content':"垃圾",'cid':27}));
+                if(id-0!==3){
+                    stomp.send("/app/message", {},
+                        JSON.stringify({'from':id,'content':"垃圾",'cid':27}));
+                }
+
             },
             function errorCallBack(error) {
                 // 连接失败时（服务器响应 ERROR 帧）的回调方法

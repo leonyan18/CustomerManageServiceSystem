@@ -1,10 +1,11 @@
 package entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "bankcard", schema = "CustomerServiceSystem", catalog = "")
-public class BankcardEntity {
+public class BankcardEntity implements Serializable {
     private int bid;
     private String bankcard;
     private UserEntity uid;

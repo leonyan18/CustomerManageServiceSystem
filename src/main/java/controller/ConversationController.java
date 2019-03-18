@@ -1,8 +1,6 @@
 package controller;
 
-import DTO.ConversationDTO;
-import dao.ConversationRepository;
-import dao.UserRepository;
+import dto.ConversationDTO;
 import entity.ConversationEntity;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -68,5 +66,11 @@ public class ConversationController {
     @ApiOperation(value="对话数")
     public void countConversation(){
         conversationService.countConversation();
+    }
+
+    @RequestMapping(value = "/matchStaff",method = RequestMethod.POST)
+    @ApiOperation(value="转接客服")
+    public ConversationEntity matchStaff(int conversationId){
+        return conversationService.matchStaff(conversationId);
     }
 }

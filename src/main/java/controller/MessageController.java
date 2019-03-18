@@ -1,26 +1,20 @@
 package controller;
 
-import DTO.MessageDTO;
+import dto.MessageDTO;
+import com.alibaba.fastjson.JSONArray;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
 import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
-import org.springframework.messaging.simp.annotation.SendToUser;
-import org.springframework.messaging.simp.user.SimpUserRegistry;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.socket.config.WebSocketMessageBrokerStats;
 import service.MessageService;
 import websocket.Msg;
 import websocket.Shout;
 
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -73,6 +67,14 @@ public class MessageController {
     public List<MessageDTO> findChatRecord(int cid, @RequestParam(defaultValue = "1") int pageNum, @RequestParam(defaultValue = "20") int pageSize) {
         return messageService.findChatRecord(cid, PageRequest.of(pageNum - 1, pageSize));
     }
+
+    @ApiOperation("匹配答案")
+    @RequestMapping(value = "matchAnswer", method = RequestMethod.POST)
+    public JSONArray matchAnswer(String problem) {
+        return messageService.matchAnswer(problem);
+    }
+
+
     @MessageExceptionHandler
     public void handleMessageException(Throwable t){
         logger.error("Error handling messsage"+t.getMessage());

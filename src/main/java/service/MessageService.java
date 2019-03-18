@@ -1,6 +1,7 @@
 package service;
 
-import DTO.MessageDTO;
+import dto.MessageDTO;
+import com.alibaba.fastjson.JSONArray;
 import org.springframework.data.domain.Pageable;
 import websocket.Msg;
 
@@ -10,4 +11,5 @@ public interface MessageService {
     void handleMessage(Msg msg);
     long count(int cid);
     List<MessageDTO> findChatRecord(int cid, Pageable pageable);
+    JSONArray matchAnswer(String problem);
 }

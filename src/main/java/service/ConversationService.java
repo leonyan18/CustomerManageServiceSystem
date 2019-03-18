@@ -1,6 +1,6 @@
 package service;
 
-import DTO.ConversationDTO;
+import dto.ConversationDTO;
 import entity.ConversationEntity;
 import org.springframework.data.domain.Pageable;
 
@@ -13,7 +13,7 @@ public interface ConversationService {
     /**
      * description:获取所有的对话
      * @param
-     * @return java.util.List<DTO.ConversationDTO>
+     * @return java.util.List<dto.ConversationDTO>
      */
     List<ConversationDTO> findAllConversation(Pageable pageable);
     int startConversation(int customerId);

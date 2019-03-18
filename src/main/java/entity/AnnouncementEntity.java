@@ -1,11 +1,12 @@
 package entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table(name = "announcement", schema = "CustomerServiceSystem", catalog = "")
-public class AnnouncementEntity {
+public class AnnouncementEntity implements Serializable {
     private int aid;
     private String content;
     private Date creatTime;

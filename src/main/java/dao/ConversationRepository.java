@@ -1,6 +1,6 @@
 package dao;
 
-import DTO.ConversationDTO;
+import dto.ConversationDTO;
 import entity.ConversationEntity;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,9 +13,9 @@ public interface ConversationRepository extends JpaRepository<ConversationEntity
      * description:获取所有的对话
      *
      * @param
-     * @return java.util.List<DTO.ConversationDTO>
+     * @return java.util.List<dto.ConversationDTO>
      */
-    @Query("select new DTO.ConversationDTO(c)FROM ConversationEntity c")
+    @Query("select new dto.ConversationDTO(c)FROM ConversationEntity c")
     List<ConversationDTO> findAllConversation(Pageable pageable);
 
     ConversationEntity findByCid(int cid);

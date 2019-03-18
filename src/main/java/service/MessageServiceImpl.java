@@ -1,12 +1,10 @@
 package service;
 
-import DTO.MessageDTO;
+import dto.MessageDTO;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import controller.ConversationController;
 import dao.ConversationRepository;
 import dao.MessageRepository;
-import dao.ProblemRepository;
 import entity.ConversationEntity;
 import entity.MessageEntity;
 import entity.ProblemEntity;
@@ -20,7 +18,6 @@ import util.ResultUtil;
 import websocket.Msg;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -30,15 +27,15 @@ public class MessageServiceImpl implements MessageService {
     private static final Logger logger = LogManager.getLogger(MessageServiceImpl.class);
     private final MessageRepository messageRepository;
     private final ConversationRepository conversationRepository;
-    private final ProblemRepository problemRepository;
+    private final ProblemService problemService;
     private final ConversationService conversationService;
 
     @Autowired
-    public MessageServiceImpl(ConversationService conversationService,SimpMessagingTemplate messaging,MessageRepository messageRepository,ConversationRepository conversationRepository,ProblemRepository problemRepository) {
+    public MessageServiceImpl(ConversationService conversationService,SimpMessagingTemplate messaging,MessageRepository messageRepository,ConversationRepository conversationRepository,ProblemService problemService) {
         this.messaging = messaging;
         this.messageRepository=messageRepository;
         this.conversationRepository=conversationRepository;
-        this.problemRepository=problemRepository;
+        this.problemService=problemService;
         this.conversationService=conversationService;
     }
 
@@ -62,30 +59,15 @@ public class MessageServiceImpl implements MessageService {
         }else{
             logger.info(ResultUtil.getSentiment(msg.getContent()));
             if (ResultUtil.getSentiment(msg.getContent())>=-0.5){
-                List<ProblemEntity> problemEntityList=problemRepository.findAll();
-                HashMap<String,ProblemEntity> problemEntityHashMap=new HashMap<>();
-                List<String> strings=new ArrayList<>();
-                for (ProblemEntity p:problemEntityList) {
-                    strings.add(p.getContent());
-                    problemEntityHashMap.put(p.getContent(),p);
-                }
-                List<String> newStrs= ResultUtil.getResult(strings,msg.getContent());
-                JSONArray jsonArray=new JSONArray();
-                for (String s:newStrs) {
-                    ProblemEntity problemEntity=problemEntityHashMap.get(s);
-                    JSONObject jsonObject=new JSONObject();
-                    jsonObject.put("problem",problemEntity.getContent());
-                    jsonObject.put("answer",problemEntity.getAnswer().getContent());
-                    jsonArray.add(jsonObject);
-                }
                 Msg newMsg=new Msg();
-                newMsg.setContent(jsonArray.toString());
+                newMsg.setContent(matchAnswer(msg.getContent()).toString());
                 newMsg.setTo(msg.getFrom());
                 newMsg.setCid(msg.getCid());
                 messaging.convertAndSendToUser(""+newMsg.getTo(),"/queue/notifications",newMsg.toString());
                 logger.info(newMsg.toString());
             }else{
                 msg.setTo(conversationService.matchStaff(conversationEntity.getCid()).getStaff().getUid());
+                logger.info(msg.toString());
                 messaging.convertAndSendToUser(""+msg.getTo(),"/queue/notifications",msg.toString());
             }
 
@@ -100,5 +82,26 @@ public class MessageServiceImpl implements MessageService {
     @Override
     public List<MessageDTO> findChatRecord(int cid, Pageable pageable) {
         return messageRepository.findChatRecord(cid,pageable);
+    }
+
+    @Override
+    public JSONArray matchAnswer(String problem) {
+        List<ProblemEntity> problemEntityList=problemService.findAll();
+        HashMap<String,ProblemEntity> problemEntityHashMap=new HashMap<>();
+        List<String> strings=new ArrayList<>();
+        for (ProblemEntity p:problemEntityList) {
+            strings.add(p.getContent());
+            problemEntityHashMap.put(p.getContent(),p);
+        }
+        List<String> newStrs= ResultUtil.getResult(strings,problem);
+        JSONArray jsonArray=new JSONArray();
+        for (String s:newStrs) {
+            ProblemEntity problemEntity=problemEntityHashMap.get(s);
+            JSONObject jsonObject=new JSONObject();
+            jsonObject.put("problem",problemEntity.getContent());
+            jsonObject.put("answer",problemEntity.getAnswer().getContent());
+            jsonArray.add(jsonObject);
+        }
+        return jsonArray;
     }
 }

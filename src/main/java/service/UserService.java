@@ -1,6 +1,6 @@
 package service;
 
-import DTO.UserDTO;
+import dto.UserDTO;
 import entity.UserEntity;
 import entity.UserType;
 import org.springframework.data.domain.Pageable;

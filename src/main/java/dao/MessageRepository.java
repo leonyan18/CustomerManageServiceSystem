@@ -1,7 +1,6 @@
 package dao;
 
-import DTO.MessageDTO;
-import entity.AnswerEntity;
+import dto.MessageDTO;
 import entity.MessageEntity;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -15,6 +14,6 @@ import java.util.List;
 public interface MessageRepository extends JpaRepository<MessageEntity,Integer> {
     MessageEntity findByMid(int mid);
     long countByConversation_Cid(int cid);
-    @Query("select new DTO.MessageDTO(m) from MessageEntity m where m.conversation.cid=?1")
+    @Query("select new dto.MessageDTO(m) from MessageEntity m where m.conversation.cid=?1")
     List<MessageDTO> findChatRecord(int cid, Pageable pageable);
 }

@@ -11,6 +11,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import util.ErrorMessage;
@@ -37,6 +39,7 @@ public class ProblemServiceImpl implements ProblemService {
     }
 
     @Override
+    @CacheEvict(cacheNames = "allProblem",allEntries = true)
     public int addProblem(ProblemEntity problemEntity, AnswerEntity answerEntity) {
         answerEntity.setCreateTime(new Date(System.currentTimeMillis()));
         answerRepository.save(answerEntity);
@@ -50,6 +53,7 @@ public class ProblemServiceImpl implements ProblemService {
     }
 
     @Override
+    @CacheEvict(cacheNames = "allProblem",allEntries = true)
     public int addProblem(ProblemEntity problemEntity, int aid) {
         AnswerEntity answerEntity = new AnswerEntity();
         answerEntity.setAid(aid);
@@ -70,6 +74,7 @@ public class ProblemServiceImpl implements ProblemService {
     }
 
     @Override
+    @CacheEvict(cacheNames = "allProblem",allEntries = true)
     public void deleteProblem(int pid) {
         if (problemRepository.existsById(pid)) {
             problemRepository.deleteById(pid);
@@ -79,6 +84,7 @@ public class ProblemServiceImpl implements ProblemService {
     }
 
     @Override
+    @CacheEvict(cacheNames = "allProblem",allEntries = true)
     public void updateProblem(ProblemEntity problemEntity) {
         if (problemRepository.existsById(problemEntity.getPid())) {
             ProblemEntity problemEntity1 = problemRepository.findByPid(problemEntity.getPid());
@@ -115,6 +121,7 @@ public class ProblemServiceImpl implements ProblemService {
     }
 
     @Override
+    @Cacheable(cacheNames = "allProblem")
     public List<ProblemEntity> findAll() {
         return problemRepository.findAll();
     }

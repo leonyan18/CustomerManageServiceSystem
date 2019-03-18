@@ -1,9 +1,11 @@
 package service;
 
-import DTO.ConversationDTO;
+import dto.ConversationDTO;
 import dao.ConversationRepository;
 import entity.ConversationEntity;
 import entity.UserEntity;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -16,6 +18,7 @@ import java.util.List;
 @Service
 public class ConversationServiceImpl implements ConversationService{
     private final ConversationRepository conversationRepository;
+    private static final Logger logger = LogManager.getLogger(ConversationServiceImpl.class);
 
     @Autowired
     public ConversationServiceImpl(ConversationRepository conversationRepository) {
@@ -41,6 +44,7 @@ public class ConversationServiceImpl implements ConversationService{
     @Override
     public void endConversation(int customerId,double evaluate) {
         ConversationEntity conversationEntity=conversationRepository.findByCid(customerId);
+        logger.info(conversationEntity);
         if (evaluate!=0.0) {
             conversationEntity.setEvaluate(evaluate);
         }
@@ -49,6 +53,7 @@ public class ConversationServiceImpl implements ConversationService{
         }
         conversationEntity.setStatus(false);
         conversationEntity.setEndtime(new Date(System.currentTimeMillis()));
+        logger.info(conversationEntity);
         conversationRepository.save(conversationEntity);
     }
 
