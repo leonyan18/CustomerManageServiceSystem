@@ -2,89 +2,19 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="CSMS:war" />
       <artifact name="CSMS:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79842757-5b59-4d82-be97-2d2e317e1cc4" name="Default Changelist" comment="websocket修复bug">
-      <change afterPath="$PROJECT_DIR$/src/main/java/config/CacheConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="79842757-5b59-4d82-be97-2d2e317e1cc4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSMS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CSMS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DTO/ConversationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/ConversationDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DTO/MessageDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/MessageDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DTO/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ConversationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ConversationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ConversationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ConversationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MessageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/AnnouncementEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/AnnouncementEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/BankcardEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/BankcardEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ClassificationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ClassificationEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ConversationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ConversationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ConversationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ConversationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/MessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ProblemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ProblemServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/DTO/ConversationDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/DTO/ConversationDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/DTO/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/DTO/UserDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/config/DataConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/config/DataConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/config/RootConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/config/RootConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/StompConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/StompConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rabbitmq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rabbitmq.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CSMS.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CSMS/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/config/StompConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/config/StompConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/config/WebInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/config/WebInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/controller/AnswerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/controller/AnswerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/controller/ClassificationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/controller/ClassificationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/controller/ConversationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/controller/ConversationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/controller/ProblemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/controller/ProblemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/controller/TestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/dao/AnswerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/dao/AnswerRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/dao/ClassificationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/dao/ClassificationRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/dao/ConversationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/dao/ConversationRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/dao/ProblemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/dao/ProblemRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/dao/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/dao/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/AnnouncementEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/AnnouncementEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/AnswerEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/AnswerEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/BankcardEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/BankcardEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/ClassificationEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/ClassificationEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/ConversationEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/ConversationEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/FeatureEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/FeatureEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/MessageEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/MessageEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/ModelEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/ModelEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/ProblemEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/ProblemEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/UserType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/entity/UserType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/foundation/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/foundation/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/foundation/RestResultWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/foundation/RestResultWrapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/AnswerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/AnswerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/AnswerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/AnswerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/ClassificationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/ClassificationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/ClassificationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/ClassificationServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/ConversationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/ConversationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/ConversationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/ConversationServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/ProblemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/ProblemService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/ProblemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/ProblemServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/service/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/util/ErrorMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/util/ErrorMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/util/Important.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/util/Important.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/util/LogicException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/util/LogicException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/util/RestResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/util/RestResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/websocket/Shout.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/websocket/Shout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSMS/WEB-INF/views/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DTO/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DTO/UserDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/TestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CSMS/WEB-INF/classes/rebel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rebel.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -113,6 +43,24 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="CustomerServiceSystem@47.101.68.88" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="CustomerServiceSystem@47.101.68.88" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="CustomerServiceSystem@47.101.68.88" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="CustomerServiceSystem: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="CustomerServiceSystem@47.101.68.88" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="CustomerServiceSystem: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="model: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -121,11 +69,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/MessageServiceImpl.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/ConversationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+            <state relative-caret-position="-142">
+              <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entity/ConversationEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="12" column="27" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/ProblemService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -133,8 +99,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/ConversationServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+            <state relative-caret-position="430">
+              <caret line="67" column="48" lean-forward="true" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/config/StompConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="46" column="63" lean-forward="true" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,10 +121,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entity/BankcardEntity.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/MessageServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+            <state relative-caret-position="183">
+              <caret line="53" column="49" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,34 +133,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dto/ConversationDTO.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entity/MessageEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1144">
-              <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
+            <state relative-caret-position="-995">
+              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dto/MessageDTO.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/rabbitmq.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="29" column="45" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/testJson.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="62">
+              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -190,45 +153,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/MessageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1378">
-              <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+            <state relative-caret-position="509">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2613#2614#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/ConversationController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1430">
-              <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/MessageRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dto/UserDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-              <folding>
-                <element signature="e#752#753#0" expanded="true" />
-                <element signature="e#809#810#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="682">
+              <caret line="31" column="60" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -261,13 +199,8 @@
       <find>logger</find>
       <find>problem</find>
       <find>current</find>
-      <find>4</find>
-      <find>47</find>
       <find>log</find>
-      <find>MessageController</find>
-      <find>conversationService</find>
-      <find>89</find>
-      <find>problemRepository</find>
+      <find>4</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -276,57 +209,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/UserType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/ProblemRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/AnswerRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/AnnouncementRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/AnswerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/AnnouncementEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/AnnouncementController.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/AnnouncementService.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/AnnouncementServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/AnswerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/AnswerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ClassificationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/ProblemService.java" />
         <option value="$PROJECT_DIR$/src/main/java/interceptor/BaseInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/config/WebConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/HttpUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/MarcoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DTO/ConversationDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/ConversationEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/websocket/Msg.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/MessageEntity.java" />
+        <option value="$PROJECT_DIR$/src/test/java/testJson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/MessageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/MessageRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DTO/MessageDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/websocket/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/interceptor/UserInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/test/java/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/ClassificationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/ProblemController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/ProblemServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/listener/WebsocketListener.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/ConversationRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/DTO/UserDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/rabbitmq.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/service/ConversationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/config/StompConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/config/WebConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/TestController.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/interceptor/UserInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/websocket/User.java" />
-        <option value="$PROJECT_DIR$/src/test/java/testJson.java" />
-        <option value="$PROJECT_DIR$/src/main/java/websocket/Msg.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Test1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/ProblemService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/config/CacheConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/ProblemServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/ClassificationEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/BankcardEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/AnnouncementEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/ConversationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/MessageService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/MessageServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/MessageController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/ConversationRepository.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/ConversationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ConversationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DTO/MessageDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DTO/ConversationDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/MessageEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dto/UserDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dto/MessageDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dto/ConversationDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/service/MessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/ConversationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/MessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/rabbitmq.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/config/StompConfig.java" />
       </list>
     </option>
   </component>
@@ -336,14 +269,14 @@
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/maven/apache-maven-3.5.3-bin/apache-maven-3.5.3" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../Tencent Files/1183503933/FileRecv/apache-maven-3.5.4-bin/apache-maven-3.5.4" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -364,10 +297,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-303" />
-    <option name="y" value="-1088" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-44" />
+    <option name="y" value="60" />
+    <option name="width" value="1336" />
+    <option name="height" value="686" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -375,200 +308,142 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="CustomerManageServiceSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CustomerManageServiceSystem" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="CustomerManageServiceSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CustomerManageServiceSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="CustomerManageServiceSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CustomerManageServiceSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="CustomerManageServiceSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CustomerManageServiceSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="CustomerManageServiceSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CustomerManageServiceSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CustomerManageServiceSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CustomerManageServiceSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CustomerManageServiceSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CustomerManageServiceSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="CustomerManageServiceSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CustomerManageServiceSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="foundation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="listener" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="CustomerManageServiceSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CustomerManageServiceSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="CustomerManageServiceSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CustomerManageServiceSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="CustomerManageServiceSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CustomerManageServiceSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="websocket" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="CustomerManageServiceSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CustomerManageServiceSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CustomerServiceSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerServiceSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="CustomerManageServiceSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="customerservicesystem" />
     <property name="JPA.DatabaseSchemaImportDialog" value="c51b0524-a96b-4197-a13c-7c9fd822f4b4" />
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552912145920" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552971482541" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/spring-boot-student" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../learn/Javaconcurrent" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dao" />
+      <recent name="service" />
+      <recent name="controller" />
+      <recent name="config" />
+      <recent name="websocket" />
+    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="" />
       <recent name="entity" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="config" />
-      <recent name="" />
-      <recent name="dao" />
-      <recent name="service" />
-      <recent name="controller" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\j2ee\CustomerServiceSystem" />
-      <recent name="D:\j2ee\CustomerServiceSystem\src\main\resources" />
       <recent name="C:\Users\yan\Documents\Tencent Files\1183503933\FileRecv\CustomerServiceSystem\src\main\webapp\WEB-INF\views" />
       <recent name="C:\Users\yan\Documents\Tencent Files\1183503933\FileRecv\CustomerServiceSystem\src\main\webapp\resources" />
       <recent name="C:\Users\yan\Documents\Tencent Files\1183503933\FileRecv\CustomerServiceSystem\src\main\webapp" />
+      <recent name="C:\Users\yan\Documents\Tencent Files\1183503933\FileRecv\CustomerServiceSystem\src\main\resources" />
+      <recent name="C:\Users\yan\Documents\Tencent Files\1183503933\FileRecv\CustomerServiceSystem\src\main\java\config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -583,15 +458,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.4">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.8">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test1" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
       <module name="CSMS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -631,11 +506,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestDao.testjieba" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDao.testProblem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CSMS" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestDao" />
-      <option name="METHOD_NAME" value="testjieba" />
+      <option name="METHOD_NAME" value="testProblem" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -656,8 +531,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.4" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.4" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
-      <option name="UPDATING_POLICY" value="restart-server" />
+    <configuration name="Tomcat 9.0.8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.8" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
         <artifact name="CSMS:war exploded">
           <settings>
@@ -668,11 +544,11 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_4_CustomerServiceSystem" />
       </server-settings>
-      <log_file alias="Tomcat Manager Log" path="%IDEA_RUN:CATALINA_BASE%/logs/manager.*" />
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file enabled="true" id="Tomcat Host Manager" />
-      <predefined_log_file enabled="true" id="Tomcat Localhost Access" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="10037" />
       </RunnerSettings>
@@ -942,19 +818,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.testJson" />
+      <item itemvalue="Application.Test" />
       <item itemvalue="Application.testJson (1)" />
-      <item itemvalue="Application.Test1" />
+      <item itemvalue="JUnit.TestDao.testProblem" />
       <item itemvalue="JUnit.TestDao.testConversation" />
-      <item itemvalue="JUnit.TestDao.testjieba" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.4" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.8" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.testJson" />
-        <item itemvalue="JUnit.TestDao.testConversation" />
-        <item itemvalue="Application.Test1" />
-        <item itemvalue="JUnit.TestDao.testjieba" />
         <item itemvalue="Application.testJson (1)" />
+        <item itemvalue="JUnit.TestDao.testConversation" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.testJson" />
+        <item itemvalue="JUnit.TestDao.testProblem" />
       </list>
     </recent_temporary>
   </component>
@@ -996,18 +872,8 @@
       <workItem from="1550737878438" duration="13928000" />
       <workItem from="1551148306395" duration="329000" />
       <workItem from="1551148762765" duration="2793000" />
-      <workItem from="1551242442560" duration="3974000" />
-      <workItem from="1551507319190" duration="13062000" />
-      <workItem from="1551875518028" duration="3247000" />
-      <workItem from="1551926812000" duration="55000" />
-      <workItem from="1552199617270" duration="4732000" />
-      <workItem from="1552383988367" duration="4213000" />
-      <workItem from="1552474455216" duration="599000" />
-      <workItem from="1552625709937" duration="7355000" />
-      <workItem from="1552637148498" duration="3776000" />
-      <workItem from="1552649155727" duration="18349000" />
-      <workItem from="1552741921767" duration="79000" />
-      <workItem from="1552911874747" duration="236000" />
+      <workItem from="1551242442560" duration="4678000" />
+      <workItem from="1552914920067" duration="4244000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1549886265704</created>
@@ -1051,31 +917,35 @@
       <option name="project" value="LOCAL" />
       <updated>1550752966749</updated>
     </task>
-    <task id="LOCAL-00007" summary="智能客服&#10;智能客服当检测到对方情绪较低时，自动转人工客服">
-      <created>1552388202458</created>
+    <task id="LOCAL-00007" summary="接口更新">
+      <created>1551358511662</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1552388202459</updated>
+      <updated>1551358511662</updated>
     </task>
-    <task id="LOCAL-00008" summary="add readme">
-      <created>1552389199649</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1552389199649</updated>
-    </task>
-    <task id="LOCAL-00009" summary="websocket修复bug">
-      <created>1552714915375</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1552714915375</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="TestDao_testjieba - 2019.02.03 at 15h 58m 28s.xml">
+      <configuration name="TestDao.testjieba" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testJson_testRecv - 2019.02.12 at 15h 04m 05s.xml">
+      <configuration name="testJson.testRecv" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDao_testProblem - 2019.02.12 at 15h 27m 10s.xml">
+      <configuration name="TestDao.testProblem" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDao_testProblem - 2019.02.12 at 15h 27m 47s.xml">
+      <configuration name="TestDao.testProblem" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDao_testConversation - 2019.02.12 at 15h 46m 06s.xml">
+      <configuration name="TestDao.testConversation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDao_testConversation - 2019.02.21 at 20h 23m 55s.xml">
+      <configuration name="TestDao.testConversation" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="TestDao_testConversation - 2019.02.21 at 20h 25m 25s.xml">
       <configuration name="TestDao.testConversation" configurationId="JUnit" />
     </history-entry>
@@ -1088,41 +958,15 @@
     <history-entry file="TestDao_testConversation - 2019.02.21 at 20h 30m 21s.xml">
       <configuration name="TestDao.testConversation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDao_testjieba - 2019.03.12 at 18h 54m 23s.xml">
-      <configuration name="TestDao.testjieba" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDao_testConversation - 2019.03.16 at 14h 47m 19s.xml">
-      <configuration name="TestDao.testConversation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDao_testConversation - 2019.03.16 at 15h 01m 44s.xml">
-      <configuration name="TestDao.testConversation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDao_testConversation - 2019.03.16 at 15h 02m 34s.xml">
-      <configuration name="TestDao.testConversation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDao_testConversation - 2019.03.16 at 15h 03m 11s.xml">
-      <configuration name="TestDao.testConversation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDao_testConversation - 2019.03.16 at 15h 03m 41s.xml">
-      <configuration name="TestDao.testConversation" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201125000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="148673000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-303" y="-1088" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.40753424" visible="true" weight="0.17590618" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.40753424" visible="true" weight="0.31769723" />
       <window_info id="Structure" order="1" sideWeight="0.58519554" side_tool="true" weight="0.23200513" />
       <window_info id="Persistence" order="2" sideWeight="0.59246576" side_tool="true" weight="0.295764" />
       <window_info id="Designer" order="3" />
@@ -1133,33 +977,33 @@
       <window_info id="Image Layers" order="8" />
       <window_info id="Web" order="9" sideWeight="0.58519554" side_tool="true" weight="0.23200513" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32924107" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.58928573" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.83370537" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5235294" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32876712" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32876712" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Database Console" order="9" weight="0.32960895" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5015129" side_tool="true" weight="0.32534248" />
-      <window_info anchor="bottom" id="File Transfer" order="13" sideWeight="0.49848714" weight="0.32534248" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50064266" side_tool="true" weight="0.3270548" />
+      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32876712" />
       <window_info anchor="bottom" id="Problems" order="14" />
       <window_info anchor="bottom" id="Java Enterprise" order="15" />
       <window_info anchor="bottom" id="Database Changes" order="16" />
       <window_info anchor="bottom" id="Version Control" order="17" weight="0.32876712" />
-      <window_info anchor="bottom" id="JRebel Executor" order="18" sideWeight="0.49848714" weight="0.739726" />
-      <window_info anchor="bottom" id="JRebel Console" order="19" sideWeight="0.5015129" side_tool="true" weight="0.739726" />
-      <window_info anchor="bottom" id="Messages" order="20" sideWeight="0.4993573" weight="0.3247768" />
+      <window_info anchor="bottom" id="JRebel Executor" order="18" sideWeight="0.4993573" weight="0.7421875" />
+      <window_info anchor="bottom" id="JRebel Console" order="19" sideWeight="0.50064266" side_tool="true" weight="0.328125" />
+      <window_info anchor="bottom" id="Messages" order="20" sideWeight="0.4993573" weight="0.32700893" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Database" order="5" weight="0.3290469" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.32889125" />
+      <window_info anchor="right" id="Maven" order="6" weight="0.32942432" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Codota" order="9" weight="0.3290469" />
@@ -1177,10 +1021,8 @@
     <MESSAGE value="websocket 点对点" />
     <MESSAGE value="会话管理" />
     <MESSAGE value="会话状态监听，员工列表带平均评价" />
-    <MESSAGE value="智能客服&#10;智能客服当检测到对方情绪较低时，自动转人工客服" />
-    <MESSAGE value="add readme" />
-    <MESSAGE value="websocket修复bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="websocket修复bug" />
+    <MESSAGE value="接口更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="接口更新" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1201,86 +1043,117 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        <state relative-caret-position="-1105">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/TestController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interceptor/UserInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="181">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/AnswerRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/UserEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
+        <state relative-caret-position="156">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/listener/WebsocketListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-365">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="66" column="65" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ConversationRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dto/UserDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding>
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ClassificationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/interceptor/BaseInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/AnnouncementService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-421">
+          <caret line="79" column="38" selection-start-line="79" selection-start-column="38" selection-end-line="79" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ClassificationRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="60" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.0.1.RELEASE/spring-data-jpa-2.0.1.RELEASE.jar!/org/springframework/data/jpa/repository/JpaRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/config/DataConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/config/CacheConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-129">
-          <caret line="46" column="42" lean-forward="true" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/AnswerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ClassificationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/HttpUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/ProblemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
+        <state relative-caret-position="104">
           <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1288,83 +1161,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/ModelEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/ProblemEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="12" column="50" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/AnswerEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/AnnouncementEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="8" column="57" lean-forward="true" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/ProblemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/foundation/RestResultWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/interceptor/BaseInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="361">
+          <caret line="29" column="48" lean-forward="true" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/websocket/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        <state relative-caret-position="434">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="e#417#418#0" expanded="true" />
             <element signature="e#454#455#0" expanded="true" />
@@ -1372,193 +1179,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/foundation/GlobalExceptionHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
+        <state relative-caret-position="403">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/UserType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/AnswerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/listener/WebsocketListener.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ClassificationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="32" column="65" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="65" />
+        <state relative-caret-position="372">
+          <caret line="24" column="51" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/RestResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="69" column="34" lean-forward="true" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+        <state relative-caret-position="155">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/ProblemServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="123" column="41" selection-start-line="123" selection-start-column="41" selection-end-line="123" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/websocket/Msg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/websocket/Shout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProblemRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/FeatureEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/MessageEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding>
-            <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#1237#1238#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ConversationRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/config/WebInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/config/StompConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/ConversationEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="21" column="55" lean-forward="true" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-          <folding>
-            <element signature="e#1689#1690#0" expanded="true" />
-            <element signature="e#1717#1718#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/rebel.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/ConversationService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/target/CSMS/WEB-INF/lib/spring-core-5.0.9.RELEASE.jar!/org/springframework/core/env/PropertyResolver.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        <state relative-caret-position="285">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/target/CSMS/WEB-INF/lib/spring-context-5.0.9.RELEASE.jar!/org/springframework/context/annotation/PropertySource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/MessageService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/ClassificationEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/MessageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/ConversationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/BankcardEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dto/ConversationDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1144">
-          <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
+        <state relative-caret-position="124">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dto/MessageDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="29" column="45" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="45" />
+        <state relative-caret-position="217">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dto/ConversationDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/testJson.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/img/666.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/AnswerEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        <state relative-caret-position="62">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/FeatureEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ProblemServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swagger.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CustomerServiceSystem.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ConversationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/AnswerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/rabbitmq.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ConversationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="67" column="48" lean-forward="true" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1567,38 +1351,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/MessageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1378">
-          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+        <state relative-caret-position="509">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2613#2614#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="31" column="60" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/ConversationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1430">
-          <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+        <state relative-caret-position="-142">
+          <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/ConversationEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ProblemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/MessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="53" column="49" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/MessageRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/MessageEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+        <state relative-caret-position="-995">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dto/UserDTO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/config/StompConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+        <state relative-caret-position="213">
+          <caret line="46" column="63" lean-forward="true" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
           <folding>
-            <element signature="e#752#753#0" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1622,7 +1433,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web (CSMS)|Web</last-edited>
+          <last-edited>Spring (CSMS)|Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1658,12 +1469,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>CSMS</last-edited>
+          <last-edited>Spring|CSMS</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

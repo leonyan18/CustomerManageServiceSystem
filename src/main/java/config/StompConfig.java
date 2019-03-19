@@ -43,12 +43,12 @@ public class StompConfig implements WebSocketMessageBrokerConfigurer {
         //消息处理带/topic,/queue前缀的
 //        config.enableSimpleBroker("/topic", "/queue");
         config.enableStompBrokerRelay("/topic", "/queue")
-//                .setClientLogin(env.getProperty("mq.username"))
-//                .setClientPasscode(env.getProperty("mq.password"))
-//                .setSystemLogin(env.getProperty("mq.username"))
-//                .setSystemPasscode(env.getProperty("mq.password"))
+                .setClientLogin(env.getProperty("mq.username"))
+                .setClientPasscode(env.getProperty("mq.password"))
+                .setSystemLogin(env.getProperty("mq.username"))
+                .setSystemPasscode(env.getProperty("mq.password"))
 //                .setRelayPort(Integer.parseInt(env.getProperty("mq.port")))
-//                .setRelayHost(env.getProperty("mq.host"))
+                .setRelayHost(env.getProperty("mq.host"))
         ;
     }
     @Override
