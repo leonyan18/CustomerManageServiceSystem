@@ -1,6 +1,8 @@
 package util;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +28,15 @@ public class ResultUtil {
             }
         }
         return newstrs;
+    }
+    public static Boolean checkMotion(String words){
+        String param="key=d74e55d83b8e412a9a7f47a0ea39e0bb&words="+words;
+        String result=HttpUtil.sendGet("http://www.txtai.com/emotion/analyze?"+param,null);
+//        System.out.println(result);
+        JSONObject jsonObject=JSONObject.parseObject(result);
+        jsonObject= (JSONObject) jsonObject.get("data");
+//        System.out.println(jsonObject.toString());
+        return Double.parseDouble( (String)jsonObject.get("negative"))>0.8;
     }
 
     public static double getSentiment(String problem) {

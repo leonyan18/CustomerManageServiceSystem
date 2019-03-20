@@ -58,7 +58,7 @@ public class MessageServiceImpl implements MessageService {
             messaging.convertAndSendToUser(""+msg.getTo(),"/queue/notifications",msg.toString());
         }else{
             logger.info(ResultUtil.getSentiment(msg.getContent()));
-            if (ResultUtil.getSentiment(msg.getContent())>=-0.5){
+            if (ResultUtil.checkMotion(msg.getContent())){
                 Msg newMsg=new Msg();
                 newMsg.setContent(matchAnswer(msg.getContent()).toString());
                 newMsg.setTo(msg.getFrom());
