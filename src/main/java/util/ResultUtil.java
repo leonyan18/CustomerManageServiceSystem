@@ -3,12 +3,18 @@ package util;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import service.MessageServiceImpl;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ResultUtil {
-//    private static final double THRESHOLD=0.8;
+    private static final double THRESHOLD=0.99;
+private static final Logger logger = LogManager.getLogger(MessageServiceImpl.class);
     public static List<String> getResult(List<String> stringList,String problem){
         JSONArray jsonArray3=new JSONArray();
         JSONArray jsonArray4=new JSONArray();
@@ -29,14 +35,19 @@ public class ResultUtil {
         }
         return newstrs;
     }
-    public static Boolean checkMotion(String words){
+    public static Boolean checkMotion(String words) {
+        try {
+            words= URLEncoder.encode(words,"utf-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
         String param="key=d74e55d83b8e412a9a7f47a0ea39e0bb&words="+words;
-        String result=HttpUtil.sendGet("http://www.txtai.com/emotion/analyze?"+param,null);
-//        System.out.println(result);
+        String result=HttpUtil.sendGet("http://www.txtai.com/emotion/analyze",param);
+        logger.info(result);
         JSONObject jsonObject=JSONObject.parseObject(result);
         jsonObject= (JSONObject) jsonObject.get("data");
-//        System.out.println(jsonObject.toString());
-        return Double.parseDouble( (String)jsonObject.get("negative"))>0.8;
+        logger.info(jsonObject.toString());
+        return Double.parseDouble( (String)jsonObject.get("negative"))>THRESHOLD;
     }
 
     public static double getSentiment(String problem) {
