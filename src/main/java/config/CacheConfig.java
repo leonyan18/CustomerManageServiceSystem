@@ -1,10 +1,13 @@
 package config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
 import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -22,10 +25,18 @@ import java.util.Set;
 @Configuration
 @EnableCaching
 @ComponentScan(basePackages = "service")
+@PropertySource("classpath:redis.properties")
 public class CacheConfig {
+    private final Environment env;
+
+    @Autowired
+    public CacheConfig(Environment env) {
+        this.env = env;
+    }
+
     @Bean
     public RedisConnectionFactory redisConnectionFactory() {
-        RedisStandaloneConfiguration config = new RedisStandaloneConfiguration("127.0.0.1", 6379);
+        RedisStandaloneConfiguration config = new RedisStandaloneConfiguration(env.getProperty("redis.host"), 6379);
         return new JedisConnectionFactory(config);
     }
 

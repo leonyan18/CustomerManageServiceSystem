@@ -42,9 +42,10 @@ public class ProblemServiceImpl implements ProblemService {
     @CacheEvict(cacheNames = "allProblem",allEntries = true)
     public int addProblem(ProblemEntity problemEntity, AnswerEntity answerEntity) {
         answerEntity.setCreateTime(new Date(System.currentTimeMillis()));
-        answerRepository.save(answerEntity);
+        answerEntity = answerRepository.save(answerEntity);
         JiebaSegmenter segmenter = new JiebaSegmenter();
-        logger.info(problemEntity.getContent());
+        logger.info(problemEntity);
+        logger.info(answerEntity);
         logger.info(StringUtils.join(segmenter.sentenceProcess(problemEntity.getContent())," "));
         problemEntity.setKeywords(StringUtils.join(segmenter.sentenceProcess(problemEntity.getContent())," "));
         problemEntity.setAnswer(answerEntity);

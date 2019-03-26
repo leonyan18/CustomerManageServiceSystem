@@ -57,7 +57,7 @@ public class MessageServiceImpl implements MessageService {
         if(conversationEntity.getStaff()!=null) {
             messaging.convertAndSendToUser(""+msg.getTo(),"/queue/notifications",msg.toString());
         }else{
-            logger.info(ResultUtil.getSentiment(msg.getContent()));
+            logger.info(ResultUtil.checkMotion(msg.getContent()));
             if (ResultUtil.checkMotion(msg.getContent())){
                 Msg newMsg=new Msg();
                 newMsg.setContent(matchAnswer(msg.getContent()).toString());

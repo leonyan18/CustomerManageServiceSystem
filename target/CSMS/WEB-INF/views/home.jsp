@@ -17,7 +17,7 @@
 <script>
     $("#btn").click(function () {
         // var url='http://'+window.location.host+'/CSMS/marcopolo';
-        var url='http://localhost:8080/CSMS/marcopolo';
+        var url='http://localhost:8081/CSMS/marcopolo';
         var socket=new SockJS(url);
         console.info(socket.url);
         var stomp=Stomp.over(socket);
@@ -32,7 +32,7 @@
                 setMessageInnerHTML("连接成功");
                 stomp.subscribe("/user/queue/notifications",handleMessage);
                 stomp.send("/app/message", {},
-                    JSON.stringify({'from':id,'content':"12121",'cid':27}));
+                    JSON.stringify({'from':id,'content':"1212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121121211212112121",'cid':27}));
                 if(id-0!==3){
                     stomp.send("/app/message", {},
                         JSON.stringify({'from':id,'content':"垃圾",'cid':27}));
