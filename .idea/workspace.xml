@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="79842757-5b59-4d82-be97-2d2e317e1cc4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -453,7 +452,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true&#10;/home/yan/IdeaProjects/CustomerManageServiceSystem/src/main/java/logs/catalina.2019-03-21.log" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553569671257" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553572480013" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/target" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
@@ -914,7 +913,7 @@
       <workItem from="1552914920067" duration="4244000" />
       <workItem from="1553084391417" duration="11582000" />
       <workItem from="1553220615831" duration="597000" />
-      <workItem from="1553232755242" duration="19524000" />
+      <workItem from="1553232755242" duration="20170000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1549886265704</created>
@@ -986,7 +985,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553569578001</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="修复问题更新ｂｕｇ">
+      <created>1553569713841</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1553569713841</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1022,7 +1028,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180376000" />
+    <option name="totallyTimeSpent" value="181022000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
