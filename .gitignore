@@ -9,3 +9,5 @@ out
 gen
 target
 logs
+hibernate.cfg.xml
+*.properties
