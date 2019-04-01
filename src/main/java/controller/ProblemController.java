@@ -35,7 +35,8 @@ public class ProblemController {
 
     @ApiOperation(value = "添加问题",notes = "只需填写问题正文和答案正文或者答案id")
     @RequestMapping(value = "addProblem", method = RequestMethod.POST)
-    public int addProblem(ProblemEntity problemEntity, AnswerEntity answerEntity) {
+    public int addProblem(ProblemEntity problemEntity) {
+        AnswerEntity answerEntity=problemEntity.getAnswer();
         if(0 != answerEntity.getAid()){
             return problemService.addProblem(problemEntity, answerEntity.getAid());
         }
