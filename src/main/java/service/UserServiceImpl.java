@@ -28,6 +28,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int addUser(UserEntity userEntity) {
+        userEntity.setNewStatus(true);
         userEntity.setCreateTime(new Date(System.currentTimeMillis()));
         return userRepository.save(userEntity).getUid();
     }
@@ -37,6 +38,7 @@ public class UserServiceImpl implements UserService {
         UserEntity userEntity = userRepository.findByUid(uid);
         if (userEntity != null) {
             if (userEntity.getType() == UserType.USER) {
+                userEntity.setNewStatus(true);
                 userEntity.setType(UserType.STAFF);
                 userRepository.save(userEntity);
             }

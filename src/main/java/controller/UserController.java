@@ -36,6 +36,18 @@ public class UserController {
         }
         return userService.addUser(userEntity);
     }
+
+    @ApiOperation("直接添加客服")
+    @RequestMapping(value = "addNewStaff", method = RequestMethod.POST)
+    public int addNewStaff(UserEntity userEntity) {
+        if ("".equals(userEntity.getUsername())||"".equals(userEntity.getPassword())) {
+            throw LogicException.le(ErrorMessage.WRONG_FORMAT);
+        }
+        int uid= userService.addUser(userEntity);
+        userService.addStaff(uid);
+        return uid;
+    }
+
     @ApiOperation(value = "添加客服",notes = "用户变为客服")
     @RequestMapping(value = "addStaff", method = RequestMethod.POST)
     public void addStaff(int uid) {

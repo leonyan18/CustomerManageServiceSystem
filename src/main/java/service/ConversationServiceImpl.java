@@ -45,9 +45,10 @@ public class ConversationServiceImpl implements ConversationService{
     public void endConversation(int customerId,double evaluate) {
         ConversationEntity conversationEntity=conversationRepository.findByCid(customerId);
         logger.info(conversationEntity);
-        if (evaluate!=0.0) {
-            conversationEntity.setEvaluate(evaluate);
+        if (0.0 == evaluate) {
+            evaluate=3.0;
         }
+        conversationEntity.setEvaluate(evaluate);
         if(!conversationEntity.getStatus()){
             return;
         }
@@ -71,4 +72,8 @@ public class ConversationServiceImpl implements ConversationService{
         return conversationRepository.save(conversationEntity);
     }
 
+    @Override
+    public List<ConversationDTO> findConversationByKeyword(Pageable pageable, String keyword) {
+        return conversationRepository.findConversationByKeyword(pageable,keyword);
+    }
 }

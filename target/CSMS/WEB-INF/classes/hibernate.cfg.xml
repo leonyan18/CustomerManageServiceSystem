@@ -7,7 +7,7 @@
       <property name="connection.url" >jdbc:mysql://47.101.68.88:3306/CustomerServiceSystem</property>
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
       <property name="hbm2ddl.auto">update</property>
-    <mapping class="entity.AnswerEntity"/>
+      <mapping class="entity.AnswerEntity"/>
       <mapping class="entity.ConversationEntity"/>
       <mapping class="entity.FeatureEntity"/>
       <mapping class="entity.MessageEntity"/>
@@ -17,5 +17,6 @@
       <mapping class="entity.AnnouncementEntity"/>
       <mapping class="entity.BankcardEntity"/>
       <mapping class="entity.ClassificationEntity"/>
+    <mapping class="entity.GreetingEntity"/>
   </session-factory>
 </hibernate-configuration>

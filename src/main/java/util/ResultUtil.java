@@ -13,8 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ResultUtil {
-    private static final double THRESHOLD=0.99;
-private static final Logger logger = LogManager.getLogger(MessageServiceImpl.class);
+    private static final double THRESHOLD=99;
+private static final Logger logger = LogManager.getLogger(ResultUtil.class);
     public static List<String> getResult(List<String> stringList,String problem){
         JSONArray jsonArray3=new JSONArray();
         JSONArray jsonArray4=new JSONArray();
@@ -47,7 +47,7 @@ private static final Logger logger = LogManager.getLogger(MessageServiceImpl.cla
         JSONObject jsonObject=JSONObject.parseObject(result);
         jsonObject= (JSONObject) jsonObject.get("data");
         logger.info(jsonObject.toString());
-        return Double.parseDouble( (String)jsonObject.get("negative"))>THRESHOLD;
+        return Double.parseDouble( (String)jsonObject.get("negative"))<THRESHOLD;
     }
 
     public static double getSentiment(String problem) {

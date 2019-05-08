@@ -20,6 +20,7 @@ public class UserEntity implements Serializable {
     private Date createTime;
     private Date lastLoginTime;
     private String name;
+    private Boolean newStatus;
 
     @Id
     @Column(name = "uid")
@@ -63,21 +64,6 @@ public class UserEntity implements Serializable {
         this.type = type;
     }
 
-    @Override
-    public String toString() {
-        return "UserEntity{" +
-                "uid=" + uid +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", type=" + type +
-                ", identitycard='" + identitycard + '\'' +
-                ", balance=" + balance +
-                ", createTime=" + createTime +
-                ", lastLoginTime=" + lastLoginTime +
-                ", name='" + name + '\'' +
-                '}';
-    }
-
     @Basic
     @ApiModelProperty("身份证号")
     @Column(name = "identitycard")
@@ -105,7 +91,6 @@ public class UserEntity implements Serializable {
     public Date getCreateTime() {
         return createTime;
     }
-
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
@@ -164,5 +149,31 @@ public class UserEntity implements Serializable {
         result = 31 * result + (createTime != null ? createTime.hashCode() : 0);
         result = 31 * result + (lastLoginTime != null ? lastLoginTime.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "new")
+    public Boolean getNewStatus() {
+        return newStatus;
+    }
+
+    public void setNewStatus(Boolean newStatus) {
+        this.newStatus = newStatus;
+    }
+
+    @Override
+    public String toString() {
+        return "UserEntity{" +
+                "uid=" + uid +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", type=" + type +
+                ", identitycard='" + identitycard + '\'' +
+                ", balance=" + balance +
+                ", createTime=" + createTime +
+                ", lastLoginTime=" + lastLoginTime +
+                ", name='" + name + '\'' +
+                ", newStatus=" + newStatus +
+                '}';
     }
 }

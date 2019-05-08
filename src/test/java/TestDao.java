@@ -1,3 +1,4 @@
+import dao.GreetingRepository;
 import dto.UserDTO;
 import com.huaban.analysis.jieba.JiebaSegmenter;
 import config.DataConfig;
@@ -11,6 +12,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import service.AnswerService;
@@ -22,6 +24,8 @@ import service.ProblemService;
 public class TestDao {
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private GreetingRepository greetingRepository;
     @Autowired
     private ProblemService problemService;
     @Autowired
@@ -65,7 +69,14 @@ public class TestDao {
     }
 
     @Test
+    public void testGreeting(){
+        System.out.println(greetingRepository.findAll());
+        System.out.println(greetingRepository.findAllByContentLike("%您好%",PageRequest.of(1,20)));
+    }
+
+    @Test
     public void testConversation(){
+        conversationRepository.findConversationByKeyword(PageRequest.of(1,20),"ya");
         conversationService.endConversation(1,0.0);
         System.out.println(conversationRepository.findByCid(1));
         System.out.println(conversationRepository.getMeanEvaluate(1));

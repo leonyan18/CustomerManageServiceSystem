@@ -52,10 +52,15 @@ public class ConversationDTO implements Serializable {
     public ConversationDTO(ConversationEntity conversationEntity) {
         logger.info(conversationEntity);
         BeanUtils.copyProperties(conversationEntity, this);
-        if(conversationEntity.getCustomer()!=null)
-        this.customer = new UserDTO(conversationEntity.getCustomer());
-        if(conversationEntity.getStaff()!=null)
-        this.staff = new UserDTO(conversationEntity.getStaff());
+        if (evaluate==null){
+            evaluate=3.0;
+        }
+        if(conversationEntity.getCustomer()!=null) {
+            this.customer = new UserDTO(conversationEntity.getCustomer());
+        }
+        if(conversationEntity.getStaff()!=null) {
+            this.staff = new UserDTO(conversationEntity.getStaff());
+        }
     }
     public int getCid() {
         return cid;

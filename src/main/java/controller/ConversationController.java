@@ -42,6 +42,13 @@ public class ConversationController {
         return conversationService.findAllConversation(PageRequest.of(pageNum-1, pageSize));
     }
 
+    @RequestMapping(value = "/findConversationByKeyword",method = RequestMethod.POST)
+    @ApiOperation(value="获取所有对话",notes = "为了安全不输出证件信息")
+    public List<ConversationDTO> findConversationByKeyword(@RequestParam(defaultValue = "1")int pageNum, @RequestParam(defaultValue = "20")int pageSize,String keyword){
+        keyword="%"+keyword+"%";
+        return conversationService.findConversationByKeyword(PageRequest.of(pageNum-1, pageSize),keyword);
+    }
+
     @RequestMapping(value = "/startConversation",method = RequestMethod.POST)
     @ApiOperation(value="开始对话",notes = "不需要填写任何东西返回的会话id")
     public int startConversation(@RequestParam(defaultValue = "4")int customerId, HttpSession session){

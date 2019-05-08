@@ -20,4 +20,5 @@ public interface ConversationService {
     void endConversation(int customerId,double evaluate);
     long countConversation();
     ConversationEntity matchStaff(int conversationId);
+    List<ConversationDTO> findConversationByKeyword(Pageable pageable,String keyword);
 }
