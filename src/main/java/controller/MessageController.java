@@ -68,6 +68,12 @@ public class MessageController {
         return messageService.findChatRecord(cid, PageRequest.of(pageNum - 1, pageSize));
     }
 
+    @ApiOperation("消息记录不分页")
+    @RequestMapping(value = "findChatRecordNoPage", method = RequestMethod.POST)
+    public List<MessageDTO> findChatRecordNoPage(int cid) {
+        return messageService.findChatRecord(cid);
+    }
+
     @ApiOperation("匹配答案")
     @RequestMapping(value = "matchAnswer", method = RequestMethod.POST)
     public JSONArray matchAnswer(String problem) {

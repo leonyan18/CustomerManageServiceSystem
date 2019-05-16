@@ -47,7 +47,7 @@ public class AnnouncementController {
 
     @ApiOperation("公告数量")
     @RequestMapping(value = "/countAnnouncement",method = RequestMethod.POST)
-    public void countAnnouncement(){
-        announcementService.countAnnouncement();
+    public long countAnnouncement(){
+        return announcementService.countAnnouncement();
     }
 }

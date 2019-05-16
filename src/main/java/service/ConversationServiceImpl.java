@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
 import java.util.List;
@@ -53,14 +54,14 @@ public class ConversationServiceImpl implements ConversationService{
             return;
         }
         conversationEntity.setStatus(false);
-        conversationEntity.setEndtime(new Date(System.currentTimeMillis()));
+        conversationEntity.setEndtime(new Date());
         logger.info(conversationEntity);
         conversationRepository.save(conversationEntity);
     }
 
     @Override
-    public long countConversation() {
-        return conversationRepository.count();
+    public long countConversation(String keyword) {
+        return conversationRepository.countConversationBykeyword(keyword);
     }
 
     @Override
@@ -74,6 +75,7 @@ public class ConversationServiceImpl implements ConversationService{
 
     @Override
     public List<ConversationDTO> findConversationByKeyword(Pageable pageable, String keyword) {
-        return conversationRepository.findConversationByKeyword(pageable,keyword);
+//        logger.info(conversationRepository.findConversationByKeyword(keyword,pageable).get(0));
+        return conversationRepository.findConversationByKeyword(keyword,pageable);
     }
 }

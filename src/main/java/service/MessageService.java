@@ -11,5 +11,6 @@ public interface MessageService {
     void handleMessage(Msg msg);
     long count(int cid);
     List<MessageDTO> findChatRecord(int cid, Pageable pageable);
+    List<MessageDTO> findChatRecord(int cid);
     JSONArray matchAnswer(String problem);
 }

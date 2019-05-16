@@ -30,7 +30,7 @@ public class WebsocketListener implements ApplicationListener {
             StompHeaderAccessor sha=StompHeaderAccessor.wrap(sessionDisconnectEvent.getMessage());
             User user= (User) sha.getUser();
             if (user != null) {
-                conversationService.endConversation(user.getConversationId(),0.0);
+                conversationService.endConversation(user.getConversationId(),3.0);
                 logger.info("断开时"+user.toString());
             }
         }

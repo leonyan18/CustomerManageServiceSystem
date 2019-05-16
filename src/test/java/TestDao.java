@@ -1,11 +1,8 @@
-import dao.GreetingRepository;
+import dao.*;
 import dto.UserDTO;
 import com.huaban.analysis.jieba.JiebaSegmenter;
 import config.DataConfig;
 import config.RootConfig;
-import dao.ConversationRepository;
-import dao.ProblemRepository;
-import dao.UserRepository;
 import entity.*;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
@@ -18,6 +15,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import service.AnswerService;
 import service.ConversationService;
 import service.ProblemService;
+
+import java.util.Date;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {DataConfig.class, RootConfig.class})
@@ -36,6 +35,8 @@ public class TestDao {
     private ConversationRepository conversationRepository;
     @Autowired
     private ConversationService conversationService;
+    @Autowired
+    private MessageRepository messageRepository;
     @Test
     public void testUser(){
         UserEntity userEntity=userRepository.findByUid(1);
@@ -76,18 +77,36 @@ public class TestDao {
 
     @Test
     public void testConversation(){
-        conversationRepository.findConversationByKeyword(PageRequest.of(1,20),"ya");
-        conversationService.endConversation(1,0.0);
-        System.out.println(conversationRepository.findByCid(1));
-        System.out.println(conversationRepository.getMeanEvaluate(1));
-        ConversationEntity conversationEntity=new ConversationEntity();
-        UserEntity userEntity1=new UserEntity();
-        userEntity1.setUid(1);
-        conversationEntity.setCustomer(userEntity1);
-        UserEntity userEntity2=new UserEntity();
-        userEntity2.setUid(2);
-        conversationEntity.setStaff(userEntity1);
-        conversationRepository.save(conversationEntity);
+
+        for (int i = 0; i < 20; i++) {
+            MessageEntity messageEntity=new MessageEntity();
+            UserEntity sender=new UserEntity();
+            sender.setUid(1);
+            UserEntity recver=new UserEntity();
+            recver.setUid(5);
+            ConversationEntity conversationEntity=new ConversationEntity();
+            conversationEntity.setCid(i%6+1);
+            messageEntity.setSender(sender);
+            messageEntity.setConversation(conversationEntity);
+            messageEntity.setContent("亲 在的呢");
+            messageEntity.setReceiver(recver);
+            messageEntity.setSendtime(new Date());
+            messageRepository.save(messageEntity);
+        }
+//        System.out.println("++++++++++++++++++++++++++++++++++++");
+//        System.out.println(conversationRepository.findConversationByKeyword("%%",PageRequest.of(0,20)));
+//        System.out.println("++++++++++++++++++++++++++++++++++++");
+//        conversationService.endConversation(1,0.0);
+//        System.out.println(conversationRepository.findByCid(1));
+//        System.out.println(conversationRepository.getMeanEvaluate(1));
+//        ConversationEntity conversationEntity=new ConversationEntity();
+//        UserEntity userEntity1=new UserEntity();
+//        userEntity1.setUid(1);
+//        conversationEntity.setCustomer(userEntity1);
+//        UserEntity userEntity2=new UserEntity();
+//        userEntity2.setUid(2);
+//        conversationEntity.setStaff(userEntity1);
+//        conversationRepository.save(conversationEntity);
     }
 
 }

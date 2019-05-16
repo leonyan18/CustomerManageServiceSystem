@@ -8,5 +8,6 @@ import java.util.List;
 
 public interface GreetingRepository extends JpaRepository<GreetingEntity, Integer> {
     List<GreetingEntity> findAllByContentLike(String keyword,Pageable pageable);
+    long countAllByContentLike(String keyword);
     GreetingEntity findByGid(int gid);
 }

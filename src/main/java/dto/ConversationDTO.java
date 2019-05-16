@@ -50,7 +50,6 @@ public class ConversationDTO implements Serializable {
     }
 
     public ConversationDTO(ConversationEntity conversationEntity) {
-        logger.info(conversationEntity);
         BeanUtils.copyProperties(conversationEntity, this);
         if (evaluate==null){
             evaluate=3.0;

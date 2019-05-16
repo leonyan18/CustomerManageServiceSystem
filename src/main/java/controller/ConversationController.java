@@ -44,8 +44,10 @@ public class ConversationController {
 
     @RequestMapping(value = "/findConversationByKeyword",method = RequestMethod.POST)
     @ApiOperation(value="获取所有对话",notes = "为了安全不输出证件信息")
-    public List<ConversationDTO> findConversationByKeyword(@RequestParam(defaultValue = "1")int pageNum, @RequestParam(defaultValue = "20")int pageSize,String keyword){
+    public List<ConversationDTO> findConversationByKeyword(@RequestParam(defaultValue = "1")int pageNum, @RequestParam(defaultValue = "20")int pageSize,@RequestParam(defaultValue = "")String keyword){
         keyword="%"+keyword+"%";
+        logger.info(keyword);
+        logger.info(conversationService.findConversationByKeyword(PageRequest.of(pageNum-1, pageSize),keyword));
         return conversationService.findConversationByKeyword(PageRequest.of(pageNum-1, pageSize),keyword);
     }
 
@@ -71,8 +73,9 @@ public class ConversationController {
 
     @RequestMapping(value = "/countConversation",method = RequestMethod.POST)
     @ApiOperation(value="对话数")
-    public void countConversation(){
-        conversationService.countConversation();
+    public long countConversation(@RequestParam(defaultValue = "")String keyword){
+        keyword="%"+keyword+"%";
+        return conversationService.countConversation(keyword);
     }
 
     @RequestMapping(value = "/matchStaff",method = RequestMethod.POST)

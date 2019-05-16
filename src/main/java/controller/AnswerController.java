@@ -45,7 +45,7 @@ public class AnswerController {
 
     @ApiOperation("答案数目")
     @RequestMapping(value = "/countAnswer",method = RequestMethod.POST)
-    public void countAnswer(){
-        answerService.countAnswer();
+    public long countAnswer(){
+        return answerService.countAnswer();
     }
 }

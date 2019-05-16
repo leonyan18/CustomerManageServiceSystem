@@ -85,6 +85,11 @@ public class MessageServiceImpl implements MessageService {
     }
 
     @Override
+    public List<MessageDTO> findChatRecord(int cid) {
+        return messageRepository.findChatRecord(cid);
+    }
+
+    @Override
     public JSONArray matchAnswer(String problem) {
         List<ProblemEntity> problemEntityList=problemService.findAll();
         HashMap<String,ProblemEntity> problemEntityHashMap=new HashMap<>();

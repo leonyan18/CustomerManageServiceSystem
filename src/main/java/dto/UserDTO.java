@@ -70,7 +70,7 @@ public class UserDTO {
         if(balance==null){
             meanEvaluate=0.0;
         }
-        if(meanEvaluate==null){
+        if(meanEvaluate==null||meanEvaluate==0){
             meanEvaluate=3.0;
         }
         if(lastLoginTime==null){

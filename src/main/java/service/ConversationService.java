@@ -18,7 +18,7 @@ public interface ConversationService {
     List<ConversationDTO> findAllConversation(Pageable pageable);
     int startConversation(int customerId);
     void endConversation(int customerId,double evaluate);
-    long countConversation();
+    long countConversation(String keyword);
     ConversationEntity matchStaff(int conversationId);
     List<ConversationDTO> findConversationByKeyword(Pageable pageable,String keyword);
 }

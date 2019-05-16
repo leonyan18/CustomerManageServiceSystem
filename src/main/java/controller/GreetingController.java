@@ -51,8 +51,15 @@ public class GreetingController {
 
     @ApiOperation("问候语列表")
     @RequestMapping(value = "/GreetingList",method = RequestMethod.POST)
-    public List<GreetingEntity> GreetingList(@RequestParam(defaultValue = "")String keyword, @RequestParam(defaultValue = "1")int pageNum, @RequestParam(defaultValue = "20")int pageSize){
+    public List<GreetingEntity> greetingList(@RequestParam(defaultValue = "")String keyword, @RequestParam(defaultValue = "1")int pageNum, @RequestParam(defaultValue = "20")int pageSize){
         logger.info(keyword);
         return greetingService.findAllByContentLike("%"+keyword+"%",PageRequest.of(pageNum-1, pageSize));
+    }
+
+    @ApiOperation("问候语数量")
+    @RequestMapping(value = "/countGreetings",method = RequestMethod.POST)
+    public long countGreetings(@RequestParam(defaultValue = "")String keyword){
+        logger.info(keyword);
+        return greetingService.countGreetings("%"+keyword+"%");
     }
 }

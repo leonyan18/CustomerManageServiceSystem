@@ -89,7 +89,7 @@ public class UserController {
     @ApiOperation(value = "更新用户信息")
     @RequestMapping(value = "updateUser", method = RequestMethod.POST)
     public void updateUser(UserDTO userDTO) {
-        if ("".equals(userDTO.getUsername())||userDTO.getType()!=null) {
+        if ("".equals(userDTO.getUsername())) {
             throw LogicException.le(ErrorMessage.WRONG_FORMAT);
         }
         userService.updateUser(userDTO);

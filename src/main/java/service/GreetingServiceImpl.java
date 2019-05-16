@@ -62,4 +62,9 @@ public class GreetingServiceImpl implements GreetingService{
         }
         return 0;
     }
+
+    @Override
+    public long countGreetings(String keyword) {
+        return greetingRepository.countAllByContentLike(keyword);
+    }
 }

@@ -102,8 +102,13 @@ public class UserServiceImpl implements UserService {
         if (userEntity == null) {
             throw LogicException.le(ErrorMessage.NO_SUCH_ENTITY);
         }
+        if(userDTO.getType()!=null)
         userEntity.setType(userDTO.getType());
+        if(userDTO.getUsername()!=null)
         userEntity.setUsername(userDTO.getUsername());
+        if(userDTO.getName()!=null)
+        userEntity.setName(userDTO.getName());
+//        userEntity.setBalance(userDTO.getBalance());
         userRepository.save(userEntity);
     }
 

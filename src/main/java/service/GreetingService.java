@@ -15,4 +15,5 @@ public interface GreetingService {
     int updateGreetingEntity(GreetingEntity greetingEntity);
     int addGreetingEntity(GreetingEntity greetingEntity);
     int deleteGreetingEntity(int gid);
+    long countGreetings(String keyword);
 }
